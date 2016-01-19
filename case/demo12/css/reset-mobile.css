@@ -1,0 +1,92 @@
+body{
+	font-family: Roboto,"Droid Sans",Helvetica,"Helvetica Neue","Heiti SC",sans-serif; 
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border: none;
+	outline: none;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+address,caption,cite,code,dfn,em,strong,th,td,var,i {
+	font-weight: normal;
+	font-style: normal;
+}
+ul, ol, nav {
+	list-style: none;
+}
+blockquote, q {
+	quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+a, ins {
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+}
+/*可能作为按钮的控件*/
+div, a, img, input {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-appearance: none;
+}
+/*用户输入时,placeholder消失*/
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder{
+	color:transparent;
+}
+/*常用class*/
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.fn-hide{
+	display: none;
+}
+/*长按时不触发系统的菜单*/
+.fn-nocallout{
+	-webkit-touch-callout: none;
+}
+/*无法选择文本*/
+.fn-noselect{
+	-webkit-user-select: none;
+}
+/*禁止文字缩放*/
+.fn-noadjust{
+	-webkit-text-size-adjust: none;
+}
+/*禁止拖动*/
+.fn-nodrag{
+	-webkit-user-drag: none;
+}
+/*页面宽度限制*/
+.wrapper{
+	margin: 0 auto;
+	max-width: 768px;
+}

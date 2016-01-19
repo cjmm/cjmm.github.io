@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title></title>
+    <meta name="Keywords" content="GQ男士网,GQ杂志" />
+    <meta name="Description" content="" />
+    <link rel="stylesheet" href="http://css.selfimg.com.cn/cssreset/reset-mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/gq.min.css" />
+    <script src="http://js.selfimg.com.cn/gallery/zepto/1.1.4/zepto.min.js"></script>
+    <script src="http://js.selfimg.com.cn/??lib/jweixin-1.0.0.js,brickjs/mshare/0.1.0/mshare.min.js"></script>
+    <script src="http://js.selfimg.com.cn/brickjs/mshare/0.1.0/mshare.min.js"></script>
+    <script src="js/gq.js"></script>
+</head>
+<body>
+    <!-- 进度条 -->
+    <div class="progress">
+        <div class="line">
+            <div class="per"></div>
+        </div>
+        <div class="num">
+            <span class="current">1</span><span class="total">/10题</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- 开始页 -->
+        <div class="page page-index page-current">
+            <div class="page-content">
+                <span class="start"><img src="img/btn_start.png" alt="开始答题" /></span>
+            </div>
+        </div>
+        <!-- 题目1页 -->
+        <div class="page page-1" data-score="0">
+            <div class="page-content">
+                <!-- 问题一列无图 -->
+                <div class="question">
+                    <img src="img/question_01.jpg" alt="" />
+                </div>
+                <!-- 答案选项“图文”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/question01_01.png" alt="">
+                            <i></i>
+                        </div>
+                        <h3>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</h3>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/question01_01.png" alt="">
+                            <i></i>
+                        </div>
+                        <h3>B.轻薄的羊绒或羊毛精纺套头衫、西装夹克。</h3>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/question01_01.png" alt="">
+                            <i></i>
+                        </div>
+                        <h3>C.帅气的冬大衣，保暖又有型。</h3>
+                    </li>
+                    <li class="btn">
+                        <div><img class="btnNext" src="img/btn_next01.png" alt="下一题" /></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目2页 -->
+        <div class="page page-2" data-score="0">
+            <div class="page-content">
+                <!-- 问题一列 -->
+                <div class="question">
+                    <img src="img/question_02.jpg" alt="" />
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目3页 -->
+        <div class="page page-3" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目4页 -->
+        <div class="page page-4" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目5页 -->
+        <div class="page page-5" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目6页 -->
+        <div class="page page-6" data-score="0">
+            <div class="page-content">
+                <!-- 问题一列 -->
+                <div class="question">
+                    <img src="img/question_02.jpg" alt="" />
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目7页 -->
+        <div class="page page-7" data-score="0">
+            <div class="page-content">
+                <!-- 问题一列 -->
+                <div class="question">
+                    <img src="img/question_02.jpg" alt="" />
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目8页 -->
+        <div class="page page-8" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目9页 -->
+        <div class="page page-9" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnPrev" src="img/btn_prev02.png" alt="上一题" />
+                            <img class="btnNext" src="img/btn_next02.png" alt="下一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 题目10页 -->
+        <div class="page page-10" data-score="0">
+            <div class="page-content">
+                <!-- 问题两列 -->
+                <div class="question twoColStyle clearfix">
+                    <div class="ql">
+                        <img src="img/question_03_L.jpg" alt="" />
+                    </div>
+                    <div class="qr">
+                        <img src="img/question_03_R.png" alt="" />
+                    </div>              
+                </div>
+                <!-- 答案选项“文字”版式 -->
+                <ul class="answer clearfix">
+                    <li class="item" data-num="-5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="5">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="item" data-num="15">
+                        <div>
+                            <img src="img/default.jpg" alt="">
+                            <h3><p>A.大件的、保暖、鲜艳的羽绒，出门最重要的是保暖！</p></h3>
+                            <i></i>
+                        </div>
+                    </li>
+                    <li class="btn">
+                        <div>
+                            <img class="btnResult" src="img/btn_result.png" alt="上一题" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 结果页 -->
+        <div class="page page-result">
+            <div class="page-content">
+                <h3>你的衣裳指数:</h3>
+                <div class="scores">
+                    <em>100</em><i>分</i>
+                </div>
+                <p>一个人的“穿衣品味”可以看出一个人的“衣商”，这事儿还真和“智商”“情商”一样，闪烁着“思想的光辉”。</p>
+                <div class="downLoad">
+                    <img src="img/downLoad.jpg" alt="" />
+                    <div class="btnWrap">
+                        <a href="#" title=""><img class="btnDownLoad" src="img/btn_down.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="shareLayout"></div>
+                <input id="btnShare" type="button" value="share" data-desc="测测你的衣裳指数" data-sUrl="http://app.yzdsb.com/dyl/index.html" data-imgUrl="img/bg_page_index.jpg" />
+            </div>
+        </div>
+    </div>
+    <!-- 调用统计代码 -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        function _trackPageview(url){
+            _gaq.push(['gqTracker._trackPageview', url.split("com.cn")[1]]);
+        }
+        function trackPageview(pageType,pindex){
+            var baseUrl = window.location.href,
+                strHref = baseUrl.split('#')[0] + '#pid=' + pageType;
+            if(typeof pindex !== 'undefined'){
+                strHref += '-' + pindex;
+            }
+            window.location.href = strHref;
+            _trackPageview(window.location.href);
+        }
+    </script>
+    <!--iResearch统计-->
+    <script type="text/javascript">
+        var _iwt_UA="UA-gq-000001";
+        (function (D) {
+        var h=D.getElementsByTagName('head')[0],
+        s=D.createElement('script');
+        s.type='text/javascript';
+        s.charset='utf-8';
+        s.src='http://js.selfimg.com.cn/gq/www/js/iwt.js';
+        h.firstChild?h.insertBefore(s,h.firstChild):h.appendChild(s);
+        })(document);
+    </script>
+    <!--GA统计-->
+    <script type="text/javascript">
+        try {
+         var _gaq = _gaq || [];
+         var pageTracker = {};
+         pageTracker._trackPageview = function(url){
+         _gaq.push(['gqTracker._trackPageview'])
+         };
+         
+         _gaq.push(['gqTracker._setAccount', 'UA-1848314-3']);
+         _gaq.push(['gqTracker._setDomainName', '.gq.com.cn']);
+         _gaq.push(function() {
+         var gqTracker = _gat._getTrackerByName('gqTracker');
+         if(window._gq_c_d_) {
+         _gq_c_d_.detectChannel(gqTracker); 
+         }
+         });
+         //_gaq.push(['gqTracker._setAllowHash', false]);
+         _gaq.push(['gqTracker._trackPageview']);
+        } catch(err) {}
+    </script>
+    <script type="text/javascript"> (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!--CNC统计-->
+    <script type="text/javascript" src="http://js.selfimg.com.cn/statistics/total.js"></script>
+    <!--百度统计-->
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc2bdcc85951eec531fec2cf87a3c9e49' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>
