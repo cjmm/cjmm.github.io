@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2" />
 <meta content="telephone=no" name="format-detection" />
 <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
-<link rel="stylesheet" href="css/index.min.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <div id="wx_pic" style="display:none;">
@@ -16,7 +16,26 @@
 </div>
 <div class="mainContainer swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide page01" data-hash="slide1">
+        <div class="swiper-slide" data-hash="slide1">
+            <div class="video">
+                    <h1>春节快乐！木木给你拜年啦！</h1>
+                    <div class="videoIn">
+                            <div id="jquery_jplayer_2" class="jp-jplayer"></div>
+                            <div id="jp_container_2" class="jp-audio" role="application" aria-label="media player">
+                                <button class="jp-play btn iconPlay" role="button" tabindex="0" id="iconPlay">
+                                    播放
+                                </button>
+                        </div>
+                    </div>
+            </div>
+            <div class="tip3Box">
+                <div class="tip3">
+                    <div class="iconBlueArrowUp"></div>
+                    <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide page01" data-hash="slide2">
             <div class="info">
                 <img class="photo" src="img/zhoume.avatar.jpg" alt="周木照片" />
                 <div class="border">
@@ -34,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-slide page02" data-hash="slide2">
+        <div class="swiper-slide page02" data-hash="slide3">
             <div class="boxIn">
                 <h3>我会什么？</h3>
                 <ul>
@@ -62,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-slide page02" data-hash="slide3">
+        <div class="swiper-slide page02" data-hash="slide4">
             <div class="boxIn listBox">
                 <h3>个人能力概况</h3>
                 <div id="main" style="height:400px"></div>
@@ -74,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-slide page03" data-hash="slide4">
+        <div class="swiper-slide page03" data-hash="slide5">
             <div class="boxIn">
                 <h3>工作经验</h3>
                 <div class="item">
@@ -114,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-slide" data-hash="slide5">
+        <div class="swiper-slide" data-hash="slide6">
             <div class="caseContainer swiper-container">
                 <div class="swiper-wrapper" id="caseRender">
                 </div>
@@ -132,6 +151,7 @@
 <script src="js/jq.js"></script>
 <script src="js/echarts-all.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
-<script src="js/index.min.js"></script>
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
