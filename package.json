@@ -1,0 +1,36 @@
+{
+    "name": "me",
+    "version": "2.0.0",
+    "description": "edp project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "edp": {
+        "wwwroot": "/",
+        "depDir": "dep",
+        "srcDir": "src",
+        "loaderAutoConfig": "js,htm,html,tpl,vm,phtml",
+        "loaderUrl": "http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-2/esl.js",
+        "dependencies": {}
+    },
+    "dependencies": {},
+    "author": "",
+    "repository": "empty",
+    "license": "MIT",
+    "readme": "README",
+    "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.2.2",
+    "ejs": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-contrib-cssmin": "^0.14.0"
+  }
+}

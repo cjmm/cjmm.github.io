@@ -331,44 +331,44 @@ $(function(){
  
             
             
-           $("#jquery_jplayer_2").jPlayer({
-        ready: function () {
-            $(this).jPlayer("setMedia", {
-                //title: "Hidden",
-                //m4v: "../src/media/bannerBg.mp4"
-                //oga: "http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg"
-                m4v: "video/bn.mp4",
-				poster: "http://www.xinhuanet.com/video/xinhuaradio/2.1.7/img/bannerPoster.jpg"
-                //m4v: "/test/org.mp4"
-            });
-            $(this).jPlayer("play");
-            //$(this).jPlayer("repeat");
-            //$(this).jPlayer("mute");
-            //$('#jp_poster_0').hide();
-        },
-        //play: function(){
-//            clearTimeout(timeout);
-//            timeout = setTimeout(function(){
-//                $('#videoBox').slideUp(2500, function(){
-//                    $("#jquery_jplayer_2").jPlayer("stop");
-//                    //////console.log('done!');
-//                });
-//            }, 10000);
+           //$("#jquery_jplayer_2").jPlayer({
+//        ready: function () {
+//            $(this).jPlayer("setMedia", {
+//                //title: "Hidden",
+//                //m4v: "../src/media/bannerBg.mp4"
+//                //oga: "http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg"
+//                m4v: "../src/video/bn.mp4",
+//				poster: "http://www.xinhuanet.com/video/xinhuaradio/2.1.7/img/bannerPoster.jpg"
+//                //m4v: "/test/org.mp4"
+//            });
+//            $(this).jPlayer("play");
+//            //$(this).jPlayer("repeat");
+//            //$(this).jPlayer("mute");
+//            //$('#jp_poster_0').hide();
 //        },
-        swfPath: "http://www.xinhuanet.com/video/xinhuaradio/js",
-        supplied: "m4v",
-        cssSelectorAncestor: "#jp_container_2",
-        wmode: "window",
-        //globalVolume: true,
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: false,
-        keyEnabled: false,
-        size: {
-            width: 320,//($(window).width()) + "px",
-            height: 640//($(window).width() * 1080 / 1920) + "px"
-        }
-    }); 
+//        //play: function(){
+////            clearTimeout(timeout);
+////            timeout = setTimeout(function(){
+////                $('#videoBox').slideUp(2500, function(){
+////                    $("#jquery_jplayer_2").jPlayer("stop");
+////                    //////console.log('done!');
+////                });
+////            }, 10000);
+////        },
+//        swfPath: "http://www.xinhuanet.com/video/xinhuaradio/js",
+//        supplied: "m4v",
+//        cssSelectorAncestor: "#jp_container_2",
+//        wmode: "window",
+//        //globalVolume: true,
+//        useStateClassSkin: true,
+//        autoBlur: false,
+//        smoothPlayBar: false,
+//        keyEnabled: false,
+//        size: {
+//            width: 320,//($(window).width()) + "px",
+//            height: 640//($(window).width() * 1080 / 1920) + "px"
+//        }
+//    }); 
 
 
 
