@@ -20,6 +20,9 @@ body {
     font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
     font-weight: 100;
+    background-color: #f2f2f2;
+    background-image: url(../img/cBg.gif);
+
 
 }
 .ie body {
@@ -49,8 +52,7 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    background-color: #f2f2f2;
-    background-image: url(../img/cBg.gif);
+    background: none;
 }
 
 .swiper-slide .swiper-slide {
