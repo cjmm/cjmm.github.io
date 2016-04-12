@@ -26,8 +26,8 @@ var device = {
             $html.addClass('mobile');
         }
 
-        console.log('p: ', p);
-        console.log('html ', $html.attr('class'));
+        // console.log('p: ', p);
+        // console.log('html ', $html.attr('class'));
 
         // alert(p);
 
@@ -53,7 +53,7 @@ var device = {
 
                 p = 'pad';
 
-                console.log(p);
+                // console.log(p);
 
                 this.html(p);
             } else {
@@ -61,11 +61,20 @@ var device = {
                     p = 'phone';
                     //  location.href = m;
                     this.html(p);
+
+                    $('.swiper-button-prev').hide();
+                    $('.swiper-button-next').hide();
+
+
                 } else {
                     if (userAgent.indexOf('gecko') > -1 && userAgent.indexOf('khtml') === -1 && userAgent.indexOf('firefox') === -1 && userAgent.indexOf('11.0') === -1) {
                         p = 'other mobile';
                         //  location.href = m;
                         this.html(p);
+
+                        $('.swiper-button-prev').hide();
+                        $('.swiper-button-next').hide();
+
                     }
                 }
             }
@@ -383,7 +392,14 @@ function mainRender() {
         //hashnav: true
         //paginationClickable: true,
         loop: true,
-        spaceBetween: 50
+        spaceBetween: 50,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        paginationType : 'custom',
+        paginationCustomRender: function (swiper, current, total) {
+            return current + ' / ' + total;
+        }
+
     });
 
     //

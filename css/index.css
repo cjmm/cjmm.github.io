@@ -578,8 +578,8 @@ body {
     font-weight: normal;
 }
 .page01 .info .border {
-    border-left: orange 1px solid;
-    border-right: orange 1px solid;
+    /*border-left: orange 1px solid;
+    border-right: orange 1px solid;*/
     padding: 0 15px;
     margin-top: 100px;
 }
@@ -669,7 +669,7 @@ body {
 .item .d {
     display: block;
     font-style: italic;
-    color: #999999;
+    /*color: #999999;*/
 }
 
 /*.page03 .item {
@@ -702,7 +702,7 @@ body {
 .tip:after {
     content: '滑动查看 >>';
     font-size: 14px;
-    color: #999999;
+    /*color: #999999;*/
     font-style: italic;
 }
 .tip2 {
@@ -711,7 +711,7 @@ body {
 .tip2:after {
     content: '向下滑动是我的电子名片：）';
     font-size: 14px;
-    color: #999999;
+    /*color: #999999;*/
     font-style: italic;
 }
 .iconBlueArrowUp {
@@ -776,7 +776,7 @@ body {
 }
 .tip4 {
     font-size: 14px;
-    color: #666666;
+    /*color: #666666;*/
     font-style: italic;
     line-height: 22px !important;
 }
