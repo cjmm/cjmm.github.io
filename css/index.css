@@ -455,9 +455,9 @@ ul {
 }
 
 .license {
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 16px;
+    font-weight: normal !important;
     width: 100%;
     margin: 0 auto;
     position: absolute;
