@@ -149,17 +149,6 @@ var $window = $(window);
 //}
 
 
-var swiper = new Swiper('.mainContainer', {
-    pagination: '.mainPagination',
-    paginationType : 'bullets',
-    direction: 'vertical',
-    slidesPerView: 1,
-    paginationClickable: true,
-    spaceBetween: 0,
-    mousewheelControl: true,
-    hashnav: true,
-
-});
 
 /*var careerSwiper = new Swiper('.careerContainer', {
     scrollbar: '.careerScrollbar',
@@ -411,6 +400,22 @@ function mainRender() {
 
 
 };
+
+
+var swiper = new Swiper('.mainContainer', {
+    pagination: '.mainPagination',
+    paginationType : 'bullets',
+    direction: 'vertical',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 30,
+    mousewheelControl: true,
+    hashnav: true,
+
+});
+
+
+
 
 // echarts init
 var myChart = echarts.init(document.getElementById('main'));
