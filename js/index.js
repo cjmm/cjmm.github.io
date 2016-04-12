@@ -1,10 +1,80 @@
-﻿/**
+﻿
+/**
  * @file   js/index.js
  * @author St. <st_sister@icloud.com>
  * @time   2015-12-16-13.37
  *         2015-01-04-09.55
  *         2015-02-07-16.34
+ *         2016-04-12-16.12 add device
  */
+
+//jq浏览器版本判断插件
+var device = {
+    userAgent: function() {
+        // console.log('u: ', navigator.userAgent.toLowerCase());
+        return navigator.userAgent.toLowerCase();
+    },
+    html: function(p){
+        var $html = $('#device');
+
+        if (p===''||p==='web'||p==='pad') {
+            $html.removeClass()
+            $html.addClass('pc');
+        }
+        else {
+            $html.removeClass();
+            $html.addClass('mobile');
+        }
+
+        console.log('p: ', p);
+        console.log('html ', $html.attr('class'));
+
+        // alert(p);
+
+    },
+    set: function() {
+        // var m = 'http://www.xinhuanet.com/video/xinhuaradio/mobile.htm';
+        var userAgent = this.userAgent();
+        var location = window.location;
+        var p = '';
+        // alert(u)
+
+
+        if (userAgent === null || userAgent === '' || (location.href.indexOf('f=pad') !== -1)) {
+            p = 'web';
+
+            this.html(p);
+
+        } else {
+
+            this.html(p);
+
+            if (userAgent.indexOf('mi pad') !== -1 || userAgent.indexOf('xiaomi/miuibrowser') !== -1 || userAgent.indexOf('ipad') !== -1) {
+
+                p = 'pad';
+
+                console.log(p);
+
+                this.html(p);
+            } else {
+                if (userAgent.match(/iphone/i) || userAgent.match(/iphone os/i) || userAgent.match(/android/i) || userAgent.match(/windows mobile/i) || userAgent.match(/ucweb/i)) {
+                    p = 'phone';
+                    //  location.href = m;
+                    this.html(p);
+                } else {
+                    if (userAgent.indexOf('gecko') > -1 && userAgent.indexOf('khtml') === -1 && userAgent.indexOf('firefox') === -1 && userAgent.indexOf('11.0') === -1) {
+                        p = 'other mobile';
+                        //  location.href = m;
+                        this.html(p);
+                    }
+                }
+            }
+        }
+    }
+};
+
+
+
 var $window = $(window);
 //var $html = $('html');
 //var $body = $('body');
@@ -75,7 +145,7 @@ var swiper = new Swiper('.mainContainer', {
     direction: 'vertical',
     slidesPerView: 1,
     paginationClickable: true,
-    spaceBetween: 30,
+    spaceBetween: 0,
     mousewheelControl: true,
     hashnav: true
 });
@@ -92,285 +162,357 @@ var swiper = new Swiper('.mainContainer', {
 
 var caseSwiper;
 
-function mainRender(){
+function mainRender() {
     var $caseRender = $('#caseRender');
     var caseData = [{
             url: null, //cases
-            title:  '',
+            title: '',
             device: '',
             compatibility: '',
             others: '<div class="cases">' +
-                        '<div>项目展示</div>' +
-                        '<div class="tip"></div>' +
-                        '<div class="tip2"></div>' +
-                        '<div class="tip3Box">' +
-                            '<div class="tip3">' +
-                                '<div class="iconBlueArrowUp"></div>' +
-                                '<div class="iconBlueArrowUp iconBlueArrowUp2"></div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>'
+                '<div>项目展示</div>' +
+                '<div class="tip"></div>' +
+                '<div class="tip2"></div>' +
+                '<div class="tip3Box">' +
+                '<div class="tip3">' +
+                '<div class="iconBlueArrowUp"></div>' +
+                '<div class="iconBlueArrowUp iconBlueArrowUp2"></div>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
         }, {
-            url: 'http://www.xinhuanet.com/fortune/wap.htm',
+            url: 'http://wwlocation.xinhuanet.com/fortune/wap.htm',
             pic: 'img/mcp.jpg',
-            title:  '新华财经',
+            title: '新华财经',
             device: 'Mobile',
             compatibility: 'webkit',
             others: '<p><span>依赖xinhuanetMCP系统</span></p>'
         }, {
             url: 'http://www.xinhuanet.com/video/xinhuaradio/',
             pic: 'img/xinhuaradio.jpg',
-            title:  '新华广播',
+            title: '新华广播',
             device: 'PC + Mobile',
             compatibility: 'webkit, IE8+',
             others: '<p><span>RIA（富互联网应用）</span></p>'
         }, {
             url: 'http://www.xinhuanet.com/politics/kzsl70/ybzbsj/index.htm',
             pic: 'img/93.jpg',
-            title:  '新华全媒直播胜利日大阅兵<br>(9.3阅兵)',
+            title: '新华全媒直播胜利日大阅兵<br>(9.3阅兵)',
             device: 'PC + Mobile',
             compatibility: 'webkit, IE8+',
             others: null
         }, {
             url: 'case/demo20/index.html',
-            title:  '伦敦生活方式',
+            title: '伦敦生活方式',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
         }, {
             url: 'case/demo11/index.html',
-            title:  'VOGUE MINI',
+            title: 'VOGUE MINI',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
-        }/*, {
-            url: 'case/demo19/index.html',
-            title:  'GQ 年度人物2015',
-            device: 'Mobile',
-            compatibility: 'webkit',
-            others: null
-        }*/, {
+        },
+        /*, {
+                    url: 'case/demo19/index.html',
+                    title:  'GQ 年度人物2015',
+                    device: 'Mobile',
+                    compatibility: 'webkit',
+                    others: null
+                }*/
+        {
             url: 'case/demo18/index.html',
-            title:  'It Bag',
+            title: 'It Bag',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
         }, {
             url: 'case/demo17/index.html',
-            title:  '银网',
+            title: '银网',
             device: 'PC',
             compatibility: 'IE6+ , 主流',
             others: null
         }, {
             url: 'case/demo16/index.html',
-            title:  '男装周2016SS',
+            title: '男装周2016SS',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
         }, {
             url: 'case/demo15/index.html',
-            title:  '时髦一夏2016',
+            title: '时髦一夏2016',
             device: 'PC',
             compatibility: 'IE6+ , 主流',
             others: null
         }, {
             url: 'case/demo14/index.html',
-            title:  '读者之选',
+            title: '读者之选',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
         }, {
             url: 'case/demo13/index.html',
-            title:  '蜜月婚礼',
+            title: '蜜月婚礼',
             device: 'PC',
             compatibility: 'IE6+ , 主流',
             others: null
         }, {
             url: 'case/demo12/index.html',
-            title:  'HOW GQ RU',
+            title: 'HOW GQ RU',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
-        }];
+        }
+    ];
     var arrayLen = caseData.length;
     var tmp = '';
-    for (var i=0, j=arrayLen; i<j; i++) {
-            //    <div class="swiper-slide">
-    //        <a href="case/demo20/index.html" title="专题(伦敦生活方式)"><img src="case/demo20/view.png" alt="" /></a>
-    //        <h3>专题(伦敦生活方式)</h3>
-    //        <p>设备：
-    //            <span>
-    //                Mobile
-    //            </span>
-    //        </p>
-    //        <p>兼容：
-    //            <span>
-    //                webkit
-    //            </span>
-    //        </p>
-    //    </div>
-         var array = caseData[i];
-         //var n;
-//         if (i<9) {
-//             n = '0' + (i + 1);
-//         }
-//         else {
-//             n = i + 1;
-//         }
-         
-         var url = array.url;
-         var pic;
-         var title;
-         var device;
-         var compatibility;
-         var others = array.others === null ? '' : array.others;
-         var newUrl;
-         
-         if (url!==null) {
-             
-             //console.log(array.pic=== undefined );
-             
-             if (array.pic===undefined) {
-                 pic = url.replace('index.html', 'view.jpg');
-             }
-             else {
-                 pic = array.pic;
-             }
-             
-             
-             
-             var cons = url.indexOf('case/demo') === 0;
+    for (var i = 0, j = arrayLen; i < j; i++) {
+        //    <div class="swiper-slide">
+        //        <a href="case/demo20/index.html" title="专题(伦敦生活方式)"><img src="case/demo20/view.png" alt="" /></a>
+        //        <h3>专题(伦敦生活方式)</h3>
+        //        <p>设备：
+        //            <span>
+        //                Mobile
+        //            </span>
+        //        </p>
+        //        <p>兼容：
+        //            <span>
+        //                webkit
+        //            </span>
+        //        </p>
+        //    </div>
+        var array = caseData[i];
+        //var n;
+        //         if (i<9) {
+        //             n = '0' + (i + 1);
+        //         }
+        //         else {
+        //             n = i + 1;
+        //         }
 
-             if (cons) {
-                 newUrl = 'http://www.dyliang.com/' + url;
-url = newUrl;
-             }
-             
-             //console.log(url);
-             
-             title = array.title;
-             device = array.device;
-             compatibility = array.compatibility;
-             
+        var url = array.url;
+        var pic;
+        var title;
+        var device;
+        var compatibility;
+        var others = array.others === null ? '' : array.others;
+        var newUrl;
+
+        if (url !== null) {
+
+            //console.log(array.pic=== undefined );
+
+            if (array.pic === undefined) {
+                pic = url.replace('index.html', 'view.jpg');
+            } else {
+                pic = array.pic;
+            }
+
+
+
+            var cons = url.indexOf('case/demo') === 0;
+
+            if (cons) {
+                newUrl = 'http://www.dyliang.com/' + url;
+                url = newUrl;
+            }
+
+            //console.log(url);
+
+            title = array.title;
+            device = array.device;
+            compatibility = array.compatibility;
+
             tmp += '<div class="swiper-slide">' +
-                    //'<a href="' + url + '" title="' + title + '" target="_blank">' +
+                        //'<a href="' + url + '" title="' + title + '" target="_blank">' +
                         '<a href="' + url + '" title="' + title + '">' +
                         '<img src="' + pic + '" alt="' + title + '" /></a>' +
                         '<h3>' + title + '</h3>' +
                         '<p>设备：' +
-                            '<span>' +
-                                           device +
-                            '</span>' +
+                        '<span>' +
+                        device +
+                        '</span>' +
                         '</p>' +
                         '<p>兼容：' +
-                            '<span>' +
-                                    compatibility +
-                            '</span>' +
+                        '<span>' +
+                        compatibility +
+                        '</span>' +
                         '</p>' +
-                        others + 
-                    //'   </a>' + 
+                        others +
+                        //'   </a>' +
                     '</div>';
-         }
-         else {
-             tmp += '<div class="swiper-slide">' +
+        } else {
+            tmp += '<div class="swiper-slide">' +
                         '<div class=boxIn>' +
                         others +
                         '</div>' +
-                    '</div>';
-         }
-         
+                   '</div>';
+        }
+
 
     }
-    
+
     $caseRender[0].innerHTML = tmp;
-    
-    
-     //var swiper = new Swiper('.swiper-container', {
-//        pagination: '.swiper-pagination',
-//        nextButton: '.swiper-button-next',
-//        prevButton: '.swiper-button-prev',
-//        slidesPerView: 1,
-//        paginationClickable: true,
-//        spaceBetween: 30,
-//        loop: true
-//    });
-    
+
+
+    //var swiper = new Swiper('.swiper-container', {
+    //        pagination: '.swiper-pagination',
+    //        nextButton: '.swiper-button-next',
+    //        prevButton: '.swiper-button-prev',
+    //        slidesPerView: 1,
+    //        paginationClickable: true,
+    //        spaceBetween: 30,
+    //        loop: true
+    //    });
+
     caseSwiper = new Swiper('.caseContainer', {
         pagination: '.casePagination',
-        effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        coverflow: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true
-        },
+        // effect: 'coverflow',
+        // coverflow: {
+        //     rotate: 50,
+        //     stretch: 0,
+        //     depth: 100,
+        //     modifier: 1,
+        //     slideShadows: true
+        // },
+
         //hashnav: true
         //paginationClickable: true,
-        //loop: true
+        loop: true,
+        spaceBetween: 50
     });
-    
-    $('.btnNext').click(function(){
+
+    //
+    $('.btnNext').click(function() {
         caseSwiper.slideNext();
     })
-        
-    
-}
 
-$(function(){
+
+};
+
+// echarts init
+var myChart = echarts.init(document.getElementById('main'));
+var option = {
+    title: {
+        text: '分布视图',
+        subtext: '2015/12'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'right',
+        y: 'bottom',
+        data: ['预估占比（％）']
+    },
+    toolbox: {
+        show: false,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    polar: [{
+        indicator: [{
+            text: 'JavaSrcipt ／ jQuery',
+            max: 100
+        }, {
+            text: '表现层',
+            max: 100
+        }, {
+            text: '设计',
+            max: 100
+        }, {
+            text: '需求',
+            max: 100
+        }, {
+            text: '交互',
+            max: 100
+        }, {
+            text: '后端',
+            max: 100
+        }, {
+            text: '服务器',
+            max: 100
+        }]
+    }],
+    calculable: true,
+    series: [{
+        name: '',
+        type: 'radar',
+        data: [{
+            value: [85, 90, 90, 80, 85, 40, 55],
+            name: '预估占比（％）'
+        }]
+    }]
+};
+
+
+// var dom = [
+//     {
+//         name:   'section5',
+//         text:   '<div class="sectionIn">'+
+//                     //'<p>献给'+ hash.set('to') +'<br>' +
+//                         //hash.set('wish') + '<br>' +
+//                         //'来自' + hash.set('from') +' / 2016-02-14' +
+//                     '<p>献给<span id="hashTo"></span><br>' +
+//                         '<span id="hashWish"></span><br>' +
+//                         '来自<span id="hashFrom"></span> / 2016-02-14' +
+//                     '</p>' +
+//                     '<img src="img/qrcode.gif" width="220" height="220" class="qrcode" /> 扫码或微信长按二维码分享 <br>' +
+//                     '<div class="license">' +
+//                         '／后面还有哦／' +
+//                     '</div>' +
+//                 '</div>'
+//     }, {
+//         name:   'section5',
+//         text:   '<div class="sectionIn">'+
+//                     '<h2>特别感谢</h2>' +
+//                     '<p>木木的React老师<a href="https://github.com/hayeah" class="textu">Howard</a>先森<br>' +
+//                     'Google doodle／Github！</p>' +
+//                     '<div class="btn">' +
+//                         '<a href="https://github.com/superwoods">' +
+//                         '访问超级木木的Github首页</a>' +
+//                     '</div>' +
+//                     '<div class="license">' +
+//                         '<a href="https://github.com/superwoods">'+
+//                             '本页面由 / 超级木木 / 木Studio 设计制作, ' +
+//                             '我们使用MIT开源协议, 欢迎转载分享, '+
+//                             '但请您务必保留我们的署名, 感谢！'+
+//                         '</a>' +
+//                     '</div>' +
+//                 '</div>'
+//    }
+// ];
+
+// section5 & section6 添加dom
+// $('#section5')[0].innerHTML = dom[0].text;
+
+
+$(function() {
+    device.set();
+    // device.html('web');
+    // $('#sectionContent')[0].innerHTML = dom[1].text;
+
     mainRender();
-    /*$('.swiper-slide').append('<div class="tip3Box">'+ 
-                    '<div class="tip3">'+ 
-                    '   <div class="iconBlueArrowUp"></div>'+ 
-                    '   <div class="iconBlueArrowUp iconBlueArrowUp2"></div>'+ 
-                    '</div>'+ 
-                '</div>');*/
- 
-            
-            
-           //$("#jquery_jplayer_2").jPlayer({
-//        ready: function () {
-//            $(this).jPlayer("setMedia", {
-//                //title: "Hidden",
-//                //m4v: "../src/media/bannerBg.mp4"
-//                //oga: "http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg"
-//                m4v: "../src/video/bn.mp4",
-//				poster: "http://www.xinhuanet.com/video/xinhuaradio/2.1.7/img/bannerPoster.jpg"
-//                //m4v: "/test/org.mp4"
-//            });
-//            $(this).jPlayer("play");
-//            //$(this).jPlayer("repeat");
-//            //$(this).jPlayer("mute");
-//            //$('#jp_poster_0').hide();
-//        },
-//        //play: function(){
-////            clearTimeout(timeout);
-////            timeout = setTimeout(function(){
-////                $('#videoBox').slideUp(2500, function(){
-////                    $("#jquery_jplayer_2").jPlayer("stop");
-////                    //////console.log('done!');
-////                });
-////            }, 10000);
-////        },
-//        swfPath: "http://www.xinhuanet.com/video/xinhuaradio/js",
-//        supplied: "m4v",
-//        cssSelectorAncestor: "#jp_container_2",
-//        wmode: "window",
-//        //globalVolume: true,
-//        useStateClassSkin: true,
-//        autoBlur: false,
-//        smoothPlayBar: false,
-//        keyEnabled: false,
-//        size: {
-//            width: 320,//($(window).width()) + "px",
-//            height: 640//($(window).width() * 1080 / 1920) + "px"
-//        }
-//    }); 
 
-
+    myChart.setOption(option);
 
 });
 
@@ -378,63 +520,3 @@ $(function(){
 //var $main = $('#main');
 //var windowWidth = $window.width();
 //$main.width( windowWidth * 0.8);
-
-// echarts init
-var myChart = echarts.init(document.getElementById('main')); 
-var option = {
-    title : {
-        text: '分布视图',
-        subtext: '2015/12'
-    },
-    tooltip : {
-        trigger: 'axis'
-    },
-    legend: {
-        orient : 'vertical',
-        x : 'right',
-        y : 'bottom',
-        data:['预估占比（％）']
-    },
-    toolbox: {
-        show : false,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    polar : [
-       {
-           indicator : [
-               { text: 'JavaSrcipt ／ jQuery',    max: 100},
-               { text: '表现层', max: 100},
-               { text: '设计',   max: 100},
-               { text: '需求',   max: 100},
-               { text: '交互',   max: 100},
-               { text: '后端',   max: 100},
-               { text: '服务器', max: 100}
-            ]
-        }
-    ],
-    calculable : true,
-    series : [
-        {
-            name: '',
-            type: 'radar',
-            data : [
-                {
-                    value : [85, 90, 90, 80, 85, 40, 55],
-                    name : '预估占比（％）'
-                }
-            ]
-        }
-    ]
-};
-myChart.setOption(option);
-
-
-
-
-
-
