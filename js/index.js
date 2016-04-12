@@ -151,12 +151,14 @@ var $window = $(window);
 
 var swiper = new Swiper('.mainContainer', {
     pagination: '.mainPagination',
+    paginationType : 'bullets',
     direction: 'vertical',
     slidesPerView: 1,
     paginationClickable: true,
     spaceBetween: 0,
     mousewheelControl: true,
-    hashnav: true
+    hashnav: true,
+
 });
 
 /*var careerSwiper = new Swiper('.careerContainer', {
@@ -395,10 +397,10 @@ function mainRender() {
         spaceBetween: 50,
         prevButton:'.swiper-button-prev',
         nextButton:'.swiper-button-next',
-        paginationType : 'custom',
-        paginationCustomRender: function (swiper, current, total) {
-            return current + ' / ' + total;
-        }
+        paginationType : 'bullets'
+        // paginationCustomRender: function (swiper, current, total) {
+        //     return current + ' / ' + total;
+        // }
 
     });
 
