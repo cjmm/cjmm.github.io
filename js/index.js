@@ -1,4 +1,3 @@
-﻿
 /**
  * @file   js/index.js
  * @author St. <st_sister@icloud.com>
@@ -181,6 +180,20 @@ function mainRender() {
                 '</div>' +
                 '</div>'
         }, {
+            url: 'https://github.com/xinhuaRadioLAB',
+            pic: 'img/xinhuaRadioLabs.tinySq280.png',
+            title: '新华网创意设计实验室 <br> 新华广播实验室',
+            device: null,
+            compatibility: null,
+            others: '<p><span>新华通讯社 新华网股份有限公司</span></p>'
+        }, {
+            url: 'http://superfec.github.io',
+            pic: 'img/superfec.jpg',
+            title: '木木前端教室',
+            device: null,
+            compatibility: null,
+            others: '<p><span>hype3课程和前端开发个人经验分享</span></p>'
+        }, {
             url: 'http://wwlocation.xinhuanet.com/fortune/wap.htm',
             pic: 'img/mcp.jpg',
             title: '新华财经',
@@ -265,7 +278,11 @@ function mainRender() {
             others: null
         }
     ];
+
     var arrayLen = caseData.length;
+
+    console.log(arrayLen);
+
     var tmp = '';
     for (var i = 0, j = arrayLen; i < j; i++) {
         //    <div class="swiper-slide">
@@ -321,24 +338,42 @@ function mainRender() {
             //console.log(url);
 
             title = array.title;
-            device = array.device;
-            compatibility = array.compatibility;
+
+            if (array.device === null) {
+                device = '';
+            } else {
+                device = '<p>设备：<span>' +
+                    array.device +
+                    '</span></p>';
+            }
+
+            if (array.compatibility === null) {
+                compatibility = '';
+            } else {
+                compatibility = '<p>兼容：<span>' +
+                    array.compatibility +
+                    '</span></p>';
+            }
+
+
+            // url: 'http://superfec.github.io',
+            // pic: 'img/superfec.jpg',
+            // title: '木木前端教室',
+            // device: null,
+            // compatibility: null,
+            // others: '<p><span>hype3和一些前端开发个人经验汇总</span></p>'
+
+
+
+
 
             tmp += '<div class="swiper-slide">' +
                 //'<a href="' + url + '" title="' + title + '" target="_blank">' +
                 '<a href="' + url + '" title="' + title + '">' +
                 '<img src="' + pic + '" alt="' + title + '" /></a>' +
                 '<h3>' + title + '</h3>' +
-                '<p>设备：' +
-                '<span>' +
                 device +
-                '</span>' +
-                '</p>' +
-                '<p>兼容：' +
-                '<span>' +
                 compatibility +
-                '</span>' +
-                '</p>' +
                 others +
                 //'   </a>' +
                 '</div>';
