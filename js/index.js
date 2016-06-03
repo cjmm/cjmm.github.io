@@ -14,14 +14,13 @@ var device = {
         // console.log('u: ', navigator.userAgent.toLowerCase());
         return navigator.userAgent.toLowerCase();
     },
-    html: function(p){
+    html: function(p) {
         var $html = $('#device');
 
-        if (p===''||p==='web'||p==='pad') {
+        if (p === '' || p === 'web' || p === 'pad') {
             $html.removeClass()
             $html.addClass('pc');
-        }
-        else {
+        } else {
             $html.removeClass();
             $html.addClass('mobile');
         }
@@ -325,29 +324,29 @@ function mainRender() {
             compatibility = array.compatibility;
 
             tmp += '<div class="swiper-slide">' +
-                        //'<a href="' + url + '" title="' + title + '" target="_blank">' +
-                        '<a href="' + url + '" title="' + title + '">' +
-                        '<img src="' + pic + '" alt="' + title + '" /></a>' +
-                        '<h3>' + title + '</h3>' +
-                        '<p>设备：' +
-                        '<span>' +
-                        device +
-                        '</span>' +
-                        '</p>' +
-                        '<p>兼容：' +
-                        '<span>' +
-                        compatibility +
-                        '</span>' +
-                        '</p>' +
-                        others +
-                        //'   </a>' +
-                    '</div>';
+                //'<a href="' + url + '" title="' + title + '" target="_blank">' +
+                '<a href="' + url + '" title="' + title + '">' +
+                '<img src="' + pic + '" alt="' + title + '" /></a>' +
+                '<h3>' + title + '</h3>' +
+                '<p>设备：' +
+                '<span>' +
+                device +
+                '</span>' +
+                '</p>' +
+                '<p>兼容：' +
+                '<span>' +
+                compatibility +
+                '</span>' +
+                '</p>' +
+                others +
+                //'   </a>' +
+                '</div>';
         } else {
             tmp += '<div class="swiper-slide">' +
-                        '<div class=boxIn>' +
-                        others +
-                        '</div>' +
-                   '</div>';
+                '<div class=boxIn>' +
+                others +
+                '</div>' +
+                '</div>';
         }
 
 
@@ -384,12 +383,12 @@ function mainRender() {
         //paginationClickable: true,
         loop: true,
         spaceBetween: 50,
-        prevButton:'.swiper-button-prev',
-        nextButton:'.swiper-button-next',
-        paginationType : 'bullets'
-        // paginationCustomRender: function (swiper, current, total) {
-        //     return current + ' / ' + total;
-        // }
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        paginationType: 'bullets'
+            // paginationCustomRender: function (swiper, current, total) {
+            //     return current + ' / ' + total;
+            // }
 
     });
 
@@ -404,7 +403,7 @@ function mainRender() {
 
 var swiper = new Swiper('.mainContainer', {
     pagination: '.mainPagination',
-    paginationType : 'bullets',
+    paginationType: 'bullets',
     direction: 'vertical',
     slidesPerView: 1,
     paginationClickable: true,
