@@ -8,146 +8,156 @@
  *         2016-06-03-10.49 update
  */
 
+var $mainContainer = $('#mainContainer'); // 主容器
+var $caseContainer = $('#caseContainer'); // 项目容器
+var $prev = $caseContainer.find('.swiper-button-prev'); // 项目容器上一桢按钮
+var $next = $caseContainer.find('.swiper-button-next'); // 项目容器下一桢按钮
+var $casePagination = $('#casePagination'); // 项目分页容器
+
 //jq浏览器版本判断插件
 var device = {
-    userAgent: function() {
-        // console.log('u: ', navigator.userAgent.toLowerCase());
-        return navigator.userAgent.toLowerCase();
-    },
+    $html: $('#device'),
+    $p6: $('#superwoods_businessCard'),
+    $p7: $('#superwoods_businessCard_en'),
+    // $p8: $('#sectionContent'),
+    UA: navigator.userAgent.toLowerCase(),
+    location: window.location,
+    // userAgent: function() {
+    //     // console.log('u: ', navigator.userAgent.toLowerCase());
+    //     return navigator.userAgent.toLowerCase();
+    // },
     html: function(p) {
-        var $html = $('#device');
+        var _this = this;
+        if (p) {
+            if (p === 'web' || p === 'pad') {
+                _this.$html.removeClass()
+                _this.$html.addClass('pc');
+                // 如果是pc和pad移除p7
+                // var $p8 = $('#sectionContent');
+                _this.$p6.append(_this.$p7.html()).addClass('hasP7Img');
+                _this.$p6.find('img:last').attr('id', '7'); // 如果为pc 那么将data-hash="7" 直接指向第二张被复制的img，使用id="7"
+                _this.$p7.remove();
+                // _this.$p8.attr('data-hash', 'p7');
+                // $p8.attr('data-hash', 'p7');
 
-        if (p === '' || p === 'web' || p === 'pad') {
-            $html.removeClass()
-            $html.addClass('pc');
-        } else {
-            $html.removeClass();
-            $html.addClass('mobile');
+                $prev.show();
+                $next.show();
+
+            } else {
+                _this.$html.removeClass();
+                _this.$html.addClass('mobile');
+                $('.hasP7Img').removeClass('hasP7Img');
+
+
+                $prev.hide();
+                $next.hide();
+            }
         }
-
         // console.log('p: ', p);
         // console.log('html ', $html.attr('class'));
-
         // alert(p);
-
     },
     set: function() {
-        // var m = 'http://www.xinhuanet.com/video/xinhuaradio/mobile.htm';
-        var userAgent = this.userAgent();
-        var location = window.location;
-        var p = '';
+        var _this = this;
+        // var userAgent = this.userAgent();
+        // var location = window.location;
+        var type = 'web';
+        // console.log(userAgent);
         // alert(u)
-
-
-        if (userAgent === null || userAgent === '' || (location.href.indexOf('f=pad') !== -1)) {
-            p = 'web';
-
-            this.html(p);
-
+        if (_this.UA === null || _this.UA === '' || (_this.location.href.indexOf('f=pad') !== -1)) {
+            // p = 'web';
+            // this.html(p);
         } else {
-
-            this.html(p);
-
-            if (userAgent.indexOf('mi pad') !== -1 || userAgent.indexOf('xiaomi/miuibrowser') !== -1 || userAgent.indexOf('ipad') !== -1) {
-
-                p = 'pad';
-
+            // this.html(p);
+            if (_this.UA.indexOf('mi pad') !== -1 || _this.UA.indexOf('xiaomi/miuibrowser') !== -1 || _this.UA.indexOf('ipad') !== -1) {
+                type = 'pad';
                 // console.log(p);
-
-                this.html(p);
+                // this.html(p);
             } else {
-                if (userAgent.match(/iphone/i) || userAgent.match(/iphone os/i) || userAgent.match(/android/i) || userAgent.match(/windows mobile/i) || userAgent.match(/ucweb/i)) {
-                    p = 'phone';
-                    //  location.href = m;
-                    this.html(p);
-
-                    $('.swiper-button-prev').hide();
-                    $('.swiper-button-next').hide();
-
+                if (_this.UA.match(/iphone/i) || _this.UA.match(/iphone os/i) || _this.UA.match(/android/i) || _this.UA.match(/windows mobile/i) || _this.UA.match(/ucweb/i)) {
+                    type = 'phone';
+                    //  _this.location.href = m;
+                    // this.html(p);
 
                 } else {
-                    if (userAgent.indexOf('gecko') > -1 && userAgent.indexOf('khtml') === -1 && userAgent.indexOf('firefox') === -1 && userAgent.indexOf('11.0') === -1) {
-                        p = 'other mobile';
-                        //  location.href = m;
-                        this.html(p);
-
-                        $('.swiper-button-prev').hide();
-                        $('.swiper-button-next').hide();
-
+                    if (_this.UA.indexOf('gecko') > -1 && _this.UA.indexOf('khtml') === -1 && _this.UA.indexOf('firefox') === -1 && _this.UA.indexOf('11.0') === -1) {
+                        type = 'other mobile';
+                        //  _this.location.href = m;
+                        // this.html(p);
+                        // $prev.hide();
+                        // $next.hide();
                     }
                 }
             }
         }
+        // console.log(type);
+        _this.html(type);
     }
 };
 
-
-
-var $window = $(window);
-//var $html = $('html');
-//var $body = $('body');
-//ie hacks
-//var userAgent = navigator.userAgent.toLowerCase();
-//jQuery.browser = {
+// var $window = $(window);
+// var $html = $('html');
+// var $body = $('body');
+// // ie hacks
+// var userAgent = navigator.userAgent.toLowerCase();
+// jQuery.browser = {
 //    version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],
 //    safari: /webkit/.test(userAgent),
 //    opera: /opera/.test(userAgent),
 //    msie: /msie/.test(userAgent) && !/opera/.test(userAgent),
 //    mozilla: /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent)
-//};
-//var browser   = $.browser;
-//var ie        = browser.msie;
-//var ieVersion = browser.version;
-//var ie8       = ie && ieVersion < 9.0;
+// };
+// var browser   = $.browser;
+// var ie        = browser.msie;
+// var ieVersion = browser.version;
+// var ie8       = ie && ieVersion < 9.0;
 //
-//if (ie) {
+// if (ie) {
 //    $html.addClass('ie');
-//} else {
+// } else {
 //    $html.removeClass('ie');
-//}
+// }
 //
-////console.log(browser);
-////console.log(ie);
-////console.log(ieVersion);
-////console.log(ie8);
+// //console.log(browser);
+// //console.log(ie);
+// //console.log(ieVersion);
+// //console.log(ie8);
 //
-//if (ie8) {
+// if (ie8) {
 //    $html.addClass('oldie');
-////    // ie8 增加 reduce
-////    if (typeof Array.prototype.reduce != "function") {
-////        Array.prototype.reduce = function (callback, initialValue) {
-////            var previous = initialValue,
-////                k = 0,
-////                length = this.length;
-////            if (typeof initialValue === "undefined") {
-////                previous = this[0];
-////                k = 1;
-////            }
-////            if (typeof callback === "function") {
-////                for (k; k < length; k++) {
-////                    this.hasOwnProperty(k) && (previous = callback(previous, this[k], k, this));
-////                }
-////            }
-////            return previous;
-////        };
-////    }
-////    // ie8 增加 forEach
-////    if (typeof Array.prototype.forEach != "function") {
-////        Array.prototype.forEach = function (fn, scope) {
-////            var i, len;
-////            for (i = 0, len = this.length; i < len; ++i) {
-////                if (i in this) {
-////                    fn.call(scope, this[i], i, this);
-////                }
-////            }
-////        };
-////    }
-//}
-//else {
+// //    // ie8 增加 reduce
+// //    if (typeof Array.prototype.reduce != "function") {
+// //        Array.prototype.reduce = function (callback, initialValue) {
+// //            var previous = initialValue,
+// //                k = 0,
+// //                length = this.length;
+// //            if (typeof initialValue === "undefined") {
+// //                previous = this[0];
+// //                k = 1;
+// //            }
+// //            if (typeof callback === "function") {
+// //                for (k; k < length; k++) {
+// //                    this.hasOwnProperty(k) && (previous = callback(previous, this[k], k, this));
+// //                }
+// //            }
+// //            return previous;
+// //        };
+// //    }
+// //    // ie8 增加 forEach
+// //    if (typeof Array.prototype.forEach != "function") {
+// //        Array.prototype.forEach = function (fn, scope) {
+// //            var i, len;
+// //            for (i = 0, len = this.length; i < len; ++i) {
+// //                if (i in this) {
+// //                    fn.call(scope, this[i], i, this);
+// //                }
+// //            }
+// //        };
+// //    }
+// }
+// else {
 //    $html.removeClass('oldie');
-//}
-
-
+// }
 
 /*var careerSwiper = new Swiper('.careerContainer', {
     scrollbar: '.careerScrollbar',
@@ -157,7 +167,6 @@ var $window = $(window);
     spaceBetween: 30,
     grabCursor: true
 });*/
-
 
 var caseSwiper;
 
@@ -390,7 +399,6 @@ function mainRender() {
 
     $caseRender[0].innerHTML = tmp;
 
-
     //var swiper = new Swiper('.swiper-container', {
     //        pagination: '.swiper-pagination',
     //        nextButton: '.swiper-button-next',
@@ -401,8 +409,8 @@ function mainRender() {
     //        loop: true
     //    });
 
-    caseSwiper = new Swiper('.caseContainer', {
-        pagination: '.casePagination',
+    caseSwiper = new Swiper($caseContainer.selector, {
+        pagination: $casePagination.selector,
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -414,7 +422,6 @@ function mainRender() {
         //     modifier: 1,
         //     slideShadows: true
         // },
-
         //hashnav: true
         //paginationClickable: true,
         loop: true,
@@ -425,32 +432,16 @@ function mainRender() {
             // paginationCustomRender: function (swiper, current, total) {
             //     return current + ' / ' + total;
             // }
-
     });
 
-    //
-    $('.btnNext').click(function() {
-        caseSwiper.slideNext();
-    })
 
-
+    $casePagination
+        .prepend('<div class="swiper-button-prev"></div>')
+        .append('<div class="swiper-button-next"></div>');
+    // $('.btnNext').click(function() {
+    //     caseSwiper.slideNext();
+    // });
 };
-
-
-var swiper = new Swiper('.mainContainer', {
-    pagination: '.mainPagination',
-    paginationType: 'bullets',
-    direction: 'vertical',
-    slidesPerView: 1,
-    paginationClickable: true,
-    spaceBetween: 30,
-    mousewheelControl: true,
-    hashnav: true,
-
-});
-
-
-
 
 // echarts init
 var myChart = echarts.init(document.getElementById('main'));
@@ -521,7 +512,6 @@ var option = {
     }]
 };
 
-
 // var dom = [
 //     {
 //         name:   'section5',
@@ -561,15 +551,51 @@ var option = {
 
 // section5 & section6 添加dom
 // $('#section5')[0].innerHTML = dom[0].text;
-
+function set_data_hash() {
+    var li = $mainContainer.find('.data-hash');
+    // console.log(li);
+    for (var i = 0, j = li.length; i < j; i++) {
+        li.eq(i).attr('data-hash', i + 1);
+        // console.log(li.eq(i));
+    }
+}
 
 $(function() {
-    device.set();
-    // device.html('web');
-    // $('#sectionContent')[0].innerHTML = dom[1].text;
 
+    // /*  初始化data-has,
+    //     为了使pc和moblie能够使用一样的hash功能地址进行分析，
+    //     在设备识别模块初始化之前先处理 data-hash
+    //
+    //     bug: !!!!!这里存在bug，会导致swiper hash混乱
+    //
+    // */
+    set_data_hash();
+
+
+    // 初始化设备识别模块
+    device.set();
+
+
+
+
+    // console.log($mainContainer);
+    // 初始化swiper
+    var swiper = new Swiper($mainContainer.selector, {
+        pagination: '.mainPagination',
+        paginationType: 'bullets',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true,
+        hashnav: true,
+
+    });
+
+    // 渲染项目
     mainRender();
 
+    // 初始化echats
     myChart.setOption(option);
 
 });
