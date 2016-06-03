@@ -435,9 +435,10 @@ function mainRender() {
     });
 
 
-    $casePagination
-        .prepend('<div class="swiper-button-prev"></div>')
-        .append('<div class="swiper-button-next"></div>');
+    // $casePagination
+    //     .prepend('<div class="swiper-button-prev"></div>')
+    //     .append('<div class="swiper-button-next"></div>');
+
     // $('.btnNext').click(function() {
     //     caseSwiper.slideNext();
     // });
