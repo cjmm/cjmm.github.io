@@ -1,8 +1,23 @@
 {
-    "name": "me",
-    "version": "2.0.0",
-    "description": "edp project",
-    "main": "index.js",
+    "name": "superwoods profile",
+    "version": "2.1.0",
+    "description": "superwoods profile",
+    "organization": "cjmm.github.io",
+    "author": {
+        "name": "Superwoods",
+        "email": "st_sister@icloud.com",
+        "url": "https://github.com/cjmm/cjmm.github.io"
+    },
+    "homepage": "http://cjmm.github.io",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cjmm/cjmm.github.io.git"
+    },
+    "bugs": "https://github.com/cjmm/cjmm.github.io/issues",
+    "github": "https://github.com/cjmm/cjmm.github.io",
+    "main": "index.html",
+    "readme": "README",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -14,23 +29,24 @@
         "loaderUrl": "http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-2/esl.js",
         "dependencies": {}
     },
-    "dependencies": {},
-    "author": "",
-    "repository": "empty",
-    "license": "MIT",
-    "readme": "README",
     "scripts": {
         "start": "node app.js"
     },
-    "dependencies": {
-        "express": "3.2.2",
-        "ejs": "*"
-    },
     "devDependencies": {
-        "grunt": "^0.4.5",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-uglify": "~0.2.7",
-        "load-grunt-tasks": "~0.2.0",
-        "grunt-contrib-cssmin": "^0.14.0"
+        "jquery": ">1.7.0",
+        "autoprefixer": "*",
+        "postcss-cli": "*",
+        "postcss-import": "*",
+        "grunt": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*",
+        "load-grunt-tasks": "*",
+        "grunt-contrib-cssmin": "*",
+        "express": "*",
+        "ejs": "*",
+        "browser-sync": "*",
+        "gsap": "*",
+        "normalize.css": "*",
+        "scrollmagic": "*"
     }
 }

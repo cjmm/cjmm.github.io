@@ -1,29 +1,30 @@
-@charset "UTF-8";
-
+/**
+ * @file   js/index.css
+ * @author St. <st_sister@icloud.com>
+ * @time   2015-12-16-13.37
+ *         2015-01-04-09.55
+ *         2015-02-07-16.34
+ *         2016-04-12-16.12 add device
+ *         2016-06-03-10.49 update
+ */
 
 /* hey we go! */
-
 html, body {
     position: relative;
     height: 100%;
 }
 body {
-    /*background: #913e6c;*/
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     font-size: 14px;
     color: #000;
     margin: 0;
     padding: 0;
     /*font-family: "PingHei", STHeitiSC-Light, "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
-    background-color: #f2f2f2;
-
     font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
     font-weight: 100;
     background-color: #f2f2f2;
     background-image: url(../img/cBg.gif);
-
-
 }
 .ie body {
     font-family: Microsoft YaHei, Microsoft YaHei Lights;
