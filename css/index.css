@@ -9,6 +9,7 @@
  */
 
 /* hey we go! */
+
 html, body {
     position: relative;
     height: 100%;
@@ -21,10 +22,12 @@ body {
     padding: 0;
     /*font-family: "PingHei", STHeitiSC-Light, "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
     font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
     font-weight: 100;
     background-color: #f2f2f2;
     background-image: url(../img/cBg.gif);
+}
+.hide {
+    display: none;
 }
 .ie body {
     font-family: Microsoft YaHei, Microsoft YaHei Lights;
@@ -55,29 +58,32 @@ body {
     align-items: center;
     background: none;
 }
-
 .swiper-slide .swiper-slide {
     background: none;
 }
-
 .swiper-container-vertical > .mainPagination {
     right: 5px;
 }
+
 /*.mainPagination .swiper-pagination-bullet {
     width: 3px;
     height: 20px;
     border-radius: 0px;
 }*/
+
+
 /*.casePagination .swiper-pagination-bullet {
     width: 10px;
     height: 3px;
     margin: 0 2px!important;
     border-radius: 0px;
 }*/
+
 .caseContainer {
     width: 100%;
     /*        padding-top: 50px;
         padding-bottom: 50px;*/
+    /*margin-bottom: 50px;*/
 }
 .caseContainer .swiper-slide {
     width: 280px;
@@ -420,21 +426,20 @@ ul {
     margin-left: -320px;
 }
 
-
 /* from love */
-.btn,
-.btn a {
+
+.btn, .btn a {
     font-size: 12px;
     line-height: 14px;
     font-weight: normal;
 }
-.btn { padding-top: 20px; }
-
+.btn {
+    padding-top: 20px;
+}
 .section6 a {
     color: #333;
     text-decoration: none;
 }
-
 .btn a {
     display: block;
     border-radius: 8px;
@@ -456,7 +461,6 @@ ul {
     color: #004986;
     font-weight: bold !important;
 }
-
 .license {
     font-size: 12px !important;
     line-height: 16px;
@@ -468,18 +472,34 @@ ul {
     left: 0;
     text-align: center;
 }
+
 /*.section5,
 .section6 { }*/
-.section6 { padding: 0 10px; }
+
+.section6 {
+    padding: 0 10px;
+}
 .section6 p {
     font-size: 20px;
     font-weight: normal;
 }
-
 .section6 a:hover {
     text-decoration: underline;
 }
+.hasP7Img img {
+    margin: 0 10px;
+}
 
+.caseContainer .swiper-button-box {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 99;
+}
 
 /*.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 10px;

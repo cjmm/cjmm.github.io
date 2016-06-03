@@ -10,26 +10,26 @@
     <meta content="telephone=no" name="format-detection" />
     <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 
 <body>
-    <div id="wx_pic" style="display:none;">
+    <div class="hide">
         <img src="img/me.jpg" width="300" height="300" alt="me logo for wechat share" />
     </div>
-    <div class="mainContainer swiper-container">
+    <div class="mainContainer swiper-container" id="mainContainer">
         <div class="swiper-wrapper">
             <!-- <div class="swiper-slide" data-hash="p1">
-            <div class="video">
-            </div>
-            <div class="tip3Box">
-                <div class="tip3">
-                    <div class="iconBlueArrowUp"></div>
-                    <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
+                <div class="video">
                 </div>
-            </div>
-        </div> -->
-            <div class="swiper-slide page01" data-hash="p1">
+                <div class="tip3Box">
+                    <div class="tip3">
+                        <div class="iconBlueArrowUp"></div>
+                        <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="swiper-slide page01 data-hash">
                 <div class="info">
                     <img class="photo" src="img/zhoume.avatar.jpg" alt="周木照片" />
                     <div class="border">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide page02" data-hash="p2">
+            <div class="swiper-slide page02 data-hash">
                 <div class="boxIn">
                     <h3>我会什么？</h3>
                     <ul>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide page02" data-hash="p3">
+            <div class="swiper-slide page02 data-hash">
                 <div class="boxIn listBox">
                     <h3>个人能力概况</h3>
                     <div id="main" style="height:400px"></div>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide page03" data-hash="p4">
+            <div class="swiper-slide page03 data-hash">
                 <div class="boxIn">
                     <h3>工作经验</h3>
                     <div class="item">
@@ -128,31 +128,24 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" data-hash="p5">
-                <div class="caseContainer swiper-container">
-
-
+            <div class="swiper-slide data-hash">
+                <div class="caseContainer swiper-container" id="caseContainer">
                     <div class="swiper-wrapper" id="caseRender">
                     </div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <div class="casePagination swiper-pagination"></div>
+                    <div class="swiper-button-box">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="casePagination swiper-pagination" id="casePagination"></div>
                 </div>
             </div>
-
-            <div class="swiper-slide" data-hash="p6">
-
+            <div class="swiper-slide data-hash" id="superwoods_businessCard">
                 <img src="img/superwoods_businessCard_zh_cn.jpg" height="100%" alt="周木中文名片" />
-
             </div>
-            <div class="swiper-slide" data-hash="p7">
-
+            <div class="swiper-slide data-hash" id="superwoods_businessCard_en">
                 <img src="img/superwoods_businessCard_en.jpg" height="100%" alt="superwoods's English businessCard" />
-
             </div>
-            <div class="swiper-slide section6" data-hash="p8" id="sectionContent">
+            <div class="swiper-slide section6 data-hash" id="sectionContent">
                 <div class="sectionIn">
                     <h2>感谢您的浏览</h2>
                     <p>
