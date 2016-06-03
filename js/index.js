@@ -281,7 +281,7 @@ function mainRender() {
 
     var arrayLen = caseData.length;
 
-    console.log(arrayLen);
+    // console.log(arrayLen);
 
     var tmp = '';
     for (var i = 0, j = arrayLen; i < j; i++) {
