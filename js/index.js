@@ -66,7 +66,7 @@ var device = {
         _this.$myWechat
             .find('.wechatImg')
             .css({
-                'height': _this.bodyHeight*0.6,
+                'height': _this.bodyHeight * 0.6,
                 'width': 'auto',
                 // 'display': 'block',
                 // 'margin': '0 auto'
@@ -114,79 +114,6 @@ var device = {
         _this.html(type);
     }
 };
-
-// var $window = $(window);
-// var $html = $('html');
-// var $body = $('body');
-// // ie hacks
-// var userAgent = navigator.userAgent.toLowerCase();
-// jQuery.browser = {
-//    version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],
-//    safari: /webkit/.test(userAgent),
-//    opera: /opera/.test(userAgent),
-//    msie: /msie/.test(userAgent) && !/opera/.test(userAgent),
-//    mozilla: /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent)
-// };
-// var browser   = $.browser;
-// var ie        = browser.msie;
-// var ieVersion = browser.version;
-// var ie8       = ie && ieVersion < 9.0;
-//
-// if (ie) {
-//    $html.addClass('ie');
-// } else {
-//    $html.removeClass('ie');
-// }
-//
-// //console.log(browser);
-// //console.log(ie);
-// //console.log(ieVersion);
-// //console.log(ie8);
-//
-// if (ie8) {
-//    $html.addClass('oldie');
-// //    // ie8 增加 reduce
-// //    if (typeof Array.prototype.reduce != "function") {
-// //        Array.prototype.reduce = function (callback, initialValue) {
-// //            var previous = initialValue,
-// //                k = 0,
-// //                length = this.length;
-// //            if (typeof initialValue === "undefined") {
-// //                previous = this[0];
-// //                k = 1;
-// //            }
-// //            if (typeof callback === "function") {
-// //                for (k; k < length; k++) {
-// //                    this.hasOwnProperty(k) && (previous = callback(previous, this[k], k, this));
-// //                }
-// //            }
-// //            return previous;
-// //        };
-// //    }
-// //    // ie8 增加 forEach
-// //    if (typeof Array.prototype.forEach != "function") {
-// //        Array.prototype.forEach = function (fn, scope) {
-// //            var i, len;
-// //            for (i = 0, len = this.length; i < len; ++i) {
-// //                if (i in this) {
-// //                    fn.call(scope, this[i], i, this);
-// //                }
-// //            }
-// //        };
-// //    }
-// }
-// else {
-//    $html.removeClass('oldie');
-// }
-
-/*var careerSwiper = new Swiper('.careerContainer', {
-    scrollbar: '.careerScrollbar',
-    scrollbarHide: false,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true
-});*/
 
 var caseSwiper;
 
@@ -464,114 +391,75 @@ function mainRender() {
     // });
 };
 
-// echarts init
-var myChart = echarts.init(document.getElementById('main'));
-var option = {
-    title: {
-        text: '分布视图',
-        subtext: '2015/12'
-    },
-    tooltip: {
-        trigger: 'axis'
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'right',
-        y: 'bottom',
-        data: ['预估占比（％）']
-    },
-    toolbox: {
-        show: false,
-        feature: {
-            mark: {
-                show: true
-            },
-            dataView: {
-                show: true,
-                readOnly: false
-            },
-            restore: {
-                show: true
-            },
-            saveAsImage: {
-                show: true
-            }
-        }
-    },
-    polar: [{
-        indicator: [{
-            text: 'JavaSrcipt ／ jQuery',
-            max: 100
-        }, {
-            text: '表现层',
-            max: 100
-        }, {
-            text: '设计',
-            max: 100
-        }, {
-            text: '需求',
-            max: 100
-        }, {
-            text: '交互',
-            max: 100
-        }, {
-            text: '后端',
-            max: 100
-        }, {
-            text: '服务器',
-            max: 100
-        }]
-    }],
-    calculable: true,
-    series: [{
-        name: '',
-        type: 'radar',
-        data: [{
-            value: [85, 90, 90, 80, 85, 40, 55],
-            name: '预估占比（％）'
-        }]
-    }]
-};
+// // echarts init
+// var myChart = echarts.init(document.getElementById('main'));
+// var option = {
+//     title: {
+//         text: '分布视图',
+//         subtext: '2015/12'
+//     },
+//     tooltip: {
+//         trigger: 'axis'
+//     },
+//     legend: {
+//         orient: 'vertical',
+//         x: 'right',
+//         y: 'bottom',
+//         data: ['预估占比（％）']
+//     },
+//     toolbox: {
+//         show: false,
+//         feature: {
+//             mark: {
+//                 show: true
+//             },
+//             dataView: {
+//                 show: true,
+//                 readOnly: false
+//             },
+//             restore: {
+//                 show: true
+//             },
+//             saveAsImage: {
+//                 show: true
+//             }
+//         }
+//     },
+//     polar: [{
+//         indicator: [{
+//             text: 'JavaSrcipt ／ jQuery',
+//             max: 100
+//         }, {
+//             text: '表现层',
+//             max: 100
+//         }, {
+//             text: '设计',
+//             max: 100
+//         }, {
+//             text: '需求',
+//             max: 100
+//         }, {
+//             text: '交互',
+//             max: 100
+//         }, {
+//             text: '后端',
+//             max: 100
+//         }, {
+//             text: '服务器',
+//             max: 100
+//         }]
+//     }],
+//     calculable: true,
+//     series: [{
+//         name: '',
+//         type: 'radar',
+//         data: [{
+//             value: [85, 90, 90, 80, 85, 40, 55],
+//             name: '预估占比（％）'
+//         }]
+//     }]
+// };
 
-// var dom = [
-//     {
-//         name:   'section5',
-//         text:   '<div class="sectionIn">'+
-//                     //'<p>献给'+ hash.set('to') +'<br>' +
-//                         //hash.set('wish') + '<br>' +
-//                         //'来自' + hash.set('from') +' / 2016-02-14' +
-//                     '<p>献给<span id="hashTo"></span><br>' +
-//                         '<span id="hashWish"></span><br>' +
-//                         '来自<span id="hashFrom"></span> / 2016-02-14' +
-//                     '</p>' +
-//                     '<img src="img/qrcode.gif" width="220" height="220" class="qrcode" /> 扫码或微信长按二维码分享 <br>' +
-//                     '<div class="license">' +
-//                         '／后面还有哦／' +
-//                     '</div>' +
-//                 '</div>'
-//     }, {
-//         name:   'section5',
-//         text:   '<div class="sectionIn">'+
-//                     '<h2>特别感谢</h2>' +
-//                     '<p>木木的React老师<a href="https://github.com/hayeah" class="textu">Howard</a>先森<br>' +
-//                     'Google doodle／Github！</p>' +
-//                     '<div class="btn">' +
-//                         '<a href="https://github.com/superwoods">' +
-//                         '访问超级木木的Github首页</a>' +
-//                     '</div>' +
-//                     '<div class="license">' +
-//                         '<a href="https://github.com/superwoods">'+
-//                             '本页面由 / 超级木木 / 木Studio 设计制作, ' +
-//                             '我们使用MIT开源协议, 欢迎转载分享, '+
-//                             '但请您务必保留我们的署名, 感谢！'+
-//                         '</a>' +
-//                     '</div>' +
-//                 '</div>'
-//    }
-// ];
-
-// section5 & section6 添加dom
-// $('#section5')[0].innerHTML = dom[0].text;
 function set_data_hash() {
     var li = $mainContainer.find('.data-hash');
     // console.log(li);
@@ -582,23 +470,9 @@ function set_data_hash() {
 }
 
 $(function() {
-
-    // /*  初始化data-has,
-    //     为了使pc和moblie能够使用一样的hash功能地址进行分析，
-    //     在设备识别模块初始化之前先处理 data-hash
-    //
-    //     bug: !!!!!这里存在bug，会导致swiper hash混乱
-    //
-    // */
     set_data_hash();
-
-
     // 初始化设备识别模块
     device.set();
-
-
-
-
     // console.log($mainContainer);
     // 初始化swiper
     var swiper = new Swiper($mainContainer.selector, {
@@ -612,16 +486,8 @@ $(function() {
         hashnav: true,
 
     });
-
     // 渲染项目
     mainRender();
-
     // 初始化echats
-    myChart.setOption(option);
-
+    // myChart.setOption(option);
 });
-
-// echarts width
-//var $main = $('#main');
-//var windowWidth = $window.width();
-//$main.width( windowWidth * 0.8);
