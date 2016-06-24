@@ -531,7 +531,7 @@ ul {
 }
 .myWechat a .btn2 {
     font-weight: normal;
-    display: inline-block;
+    display: block;
     border: #CCC 1px solid;
     text-align: center;
     padding: 12px 22px;
