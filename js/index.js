@@ -19,6 +19,7 @@ var device = {
     $html: $('#device'),
     $p6: $('#superwoods_businessCard'),
     $p7: $('#superwoods_businessCard_en'),
+    // $myWechat: $('#myWechat'),
     // $p8: $('#sectionContent'),
     UA: navigator.userAgent.toLowerCase(),
     location: window.location,
@@ -43,6 +44,9 @@ var device = {
                 $prev.show();
                 $next.show();
 
+
+
+
             } else {
                 _this.$html.removeClass();
                 _this.$html.addClass('mobile');
@@ -53,6 +57,22 @@ var device = {
                 $next.hide();
             }
         }
+
+        if (!_this.$myWechat) {
+            _this.$myWechat = $('#myWechat');
+            _this.bodyHeight = $('body').height();
+        }
+
+        _this.$myWechat
+            .find('.wechatImg')
+            .css({
+                'height': _this.bodyHeight*0.6,
+                'width': 'auto',
+                // 'display': 'block',
+                // 'margin': '0 auto'
+            });
+
+
         // console.log('p: ', p);
         // console.log('html ', $html.attr('class'));
         // alert(p);
