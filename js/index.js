@@ -66,8 +66,8 @@ var device = {
         _this.$myWechat
             .find('.wechatImg')
             .css({
-                'height': _this.bodyHeight * 0.6,
-                'width': 'auto',
+                'height': Math.round(_this.bodyHeight * 0.6),
+                'width': 'auto'
                 // 'display': 'block',
                 // 'margin': '0 auto'
             });
