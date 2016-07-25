@@ -26,114 +26,118 @@ module.exports = function(grunt) {
             ' * @time <%= grunt.template.today("yyyy-mm-dd-HH.MM.ss") %>\n' +
             ' */\n',
 
-        // 清空dist
-        clean: {
-            dist: {
-                src: ['<%= config.dist %>']
-            },
-            // dist2: {
-            //     src: [
-            //         '<%= config.dist %>/index.html',
-            //     ]
-            // },
-        },
-
-        // copy img 到dist目录，如果启用img压缩模块请关闭这里
+        // // 清空dist
+        // clean: {
+        //     dist: {
+        //         src: ['<%= config.dist %>']
+        //     },
+        //     // dist2: {
+        //     //     src: [
+        //     //         '<%= config.dist %>/index.html',
+        //     //     ]
+        //     // },
+        // },
+        //
+        // // copy img 到dist目录，如果启用img压缩模块请关闭这里
         copy: {
-            img: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.src %>/img/', // Src matches are relative to this path
-                    src: ['*.{png,jpg,jpeg,gif,webp,svg}'], // Actual patterns to match
-                    dest: '<%= config.dist %>/img/' // Destination path prefix
-                }]
-            },
-            html: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.src %>/',
-                    src: ['*.html'], // *.html: all
-                    dest: '<%= config.dist %>/', // Destination path prefix.
-                    // ext: '.html', // Dest filepaths will have this extension.
-                }]
-            },
+            // img: {
+            //     files: [{
+            //         expand: true,
+            //         cwd: '<%= config.src %>/img/', // Src matches are relative to this path
+            //         src: ['*.{png,jpg,jpeg,gif,webp,svg}'], // Actual patterns to match
+            //         dest: '<%= config.dist %>/img/' // Destination path prefix
+            //     }]
+            // },
+            // html: {
+            //     files: [{
+            //         expand: true,
+            //         cwd: '<%= config.src %>/',
+            //         src: ['*.html'], // *.html: all
+            //         dest: '<%= config.dist %>/', // Destination path prefix.
+            //         // ext: '.html', // Dest filepaths will have this extension.
+            //     }]
+            // },
 			maps: {
 				files: [{
                     expand: true,
-                    cwd: '<%= config.src %>/js/maps/',
+                    cwd: 'js/maps/',
                     src: ['*.map'],
-                    dest: '<%= config.dist %>/dist/maps/',
+                    dest: 'bundle/maps/',
                 }]
 			},
-			cases: {
-				files: [{
-                    expand: true,
-                    cwd: '<%= config.src %>/case/',
-                    src: ['*.*'],
-                    dest: '<%= config.dist %>/case/',
-                }]
-			}
+			// cases: {
+			// 	files: [{
+            //         expand: true,
+            //         cwd: '<%= config.src %>/case/',
+            //         src: ['*.*'],
+            //         dest: '<%= config.dist %>/case/',
+            //     }]
+			// }
         },
-
-        // Reads HTML for usemin blocks to enable smart builds that automatically
-        // concat, minify and revision files. Creates configurations in memory so
-        // additional tasks can operate on them
-        useminPrepare: {
-            html: '<%= config.dist %>/*.html',
-            options: {
-                dest: '<%= config.dist %>/',
-            }
-        },
-        // Performs rewrites based on filerev and the useminPrepare configuration
-        usemin: {
-            html: ['<%= config.dist %>/{,*/}*.html'],
-            options: {
-                assetsDirs: [
-                    '<%= config.dist %>/',
-                ],
-            }
-        },
+        //
+        // // Reads HTML for usemin blocks to enable smart builds that automatically
+        // // concat, minify and revision files. Creates configurations in memory so
+        // // additional tasks can operate on them
+        // useminPrepare: {
+        //     html: '<%= config.dist %>/*.html',
+        //     options: {
+        //         dest: '<%= config.dist %>/',
+        //     }
+        // },
+        // // Performs rewrites based on filerev and the useminPrepare configuration
+        // usemin: {
+        //     html: ['<%= config.dist %>/{,*/}*.html'],
+        //     options: {
+        //         assetsDirs: [
+        //             '<%= config.dist %>/',
+        //         ],
+        //     }
+        // },
 
         concat: { //css文件合并
             options: {
                 //all 不删除注释，还可以为 false（删除全部注释），some（保留@preserve @license @cc_on等注释）
-                preserveComments: 'false',
+                // preserveComments: 'false',
                 banner: '<%= banner %>',
                 stripBanners: true
             },
-            js: {
-                /*
-                    输出路径: [
-                        输入路径,
-                        输入路径
-                    ]
-                */
-                files: {
-                    '<%= config.dist %>/dist/index.js': [ // bundle js
-                        "<%= config.src %>/js/jq.js",
-                        "<%= config.src %>/js/swiper.jquery.min.js",
-                        // "<%= config.src %>/js/echarts-all.js",
-                        "<%= config.src %>/bundle/index.js",
-                    ],
-                },
-            },
+            // js: {
+            //     /*
+            //         输出路径: [
+            //             输入路径,
+            //             输入路径
+            //         ]
+            //     */
+            //     files: {
+            //         '<%= config.dist %>/dist/index.js': [ // bundle js
+            //             "<%= config.src %>/js/jq.js",
+            //             "<%= config.src %>/js/swiper.jquery.min.js",
+            //             // "<%= config.src %>/js/echarts-all.js",
+            //             "<%= config.src %>/bundle/index.js",
+            //         ],
+            //     },
+            // },
             cssAddBanner: {
                 files: [{
                     expand: true,
-                    cwd: '<%= config.dist %>/dist/',
-                    src: ['*.min.css'],
-                    dest: '<%= config.dist %>/dist/',
+                    // cwd: '<%= config.dist %>/dist/',
+                    cwd: 'bundle/',
+                    src: ['index.min.css'],
+                    // dest: '<%= config.dist %>/dist/',
+                    dest: 'bundle/',
                 }]
             }
         },
+
         cssmin: {
             execute: {
                 files: {
-                    '<%= config.dist %>/bundle/index.min.css': ['<%= config.src %>/bundle/index.css'],
-					// '<%= config.src %>/bundle/index.min.css': ['<%= config.src %>/bundle/index.css'],
+                    // '<%= config.dist %>/bundle/index.min.css': ['<%= config.src %>/bundle/index.css'],
+                    'bundle/index.min.css': ['bundle/index.min.css'],
                 }
             }
         },
+
         uglify: {
             options: {
                 banner: '<%= banner %>',
@@ -143,7 +147,7 @@ module.exports = function(grunt) {
             },
             execute: {
                 files: {
-                    '<%= config.dist %>/dist/index.min.js': ['<%= config.dist %>/dist/index.js'],
+                    'bundle/index.min.js': ['bundle/index.min.js'],
                 }
             }
         },
@@ -161,15 +165,15 @@ module.exports = function(grunt) {
 
 	// default
     grunt.registerTask('default', [
-        'clean:dist',          //  dist: clean
-        'concat:js',           //    js: concat
+        // 'clean:dist',          //  dist: clean
+        // 'concat:js',           //    js: concat
         'uglify',              //        uglify
 		'cssmin',              //   css: cssmin
 		'concat:cssAddBanner', //        cssAddBanner
-		'copy:html',           //  html: copy
-        'useminPrepare',       //        useminPrepare
-        'usemin',              //        usemin
-		'copy:img',            //   img: copy
+		// 'copy:html',           //  html: copy
+        // 'useminPrepare',       //        useminPrepare
+        // 'usemin',              //        usemin
+		// 'copy:img',            //   img: copy
 		'copy:maps',           //  maps: copy
 		// 'copy:cases',          // cases: copy
     ]);

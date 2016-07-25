@@ -10,7 +10,7 @@
  *         2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-25-11:59:14
+ * @(demo)Last modified time: 2016-07-25-05:14:35
  */
 
 
@@ -48,11 +48,10 @@ body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /*background: #502e44;*/
     overflow: hidden;
-    /* Center slide text vertically */
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    flex-flow:column;
     align-items: center;
     background: none;
 }
@@ -336,11 +335,20 @@ body {
     top: 8px;
 }
 .tip4 {
-    font-size: 14px;
+    font-size: 16px;
     /*color: #666666;*/
     font-style: italic;
     line-height: 22px !important;
 }
+.tip4 a {
+    color: orange;
+    text-decoration: none;
+}
+.tip4 a:hover {
+    text-decoration: underline;
+}
+
+
 @keyframes ani0 {
     0% {
         top: 0;
@@ -475,6 +483,9 @@ ul {
 }
 .hasP7Img img {
     margin: 0 10px;
+}
+.swiper-slide.hasP7Img {
+    flex-flow: row;
 }
 .caseContainer .swiper-button-box {
     position: absolute;
