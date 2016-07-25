@@ -68,8 +68,8 @@ var device = {
             .css({
                 'height': Math.round(_this.bodyHeight * 0.6),
                 'width': 'auto'
-                // 'display': 'block',
-                // 'margin': '0 auto'
+                    // 'display': 'block',
+                    // 'margin': '0 auto'
             });
 
 
