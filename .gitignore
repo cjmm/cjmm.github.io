@@ -36,7 +36,7 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# Javascript libs
+# Folders
 lib/
 sundries/
-dist/
+local/

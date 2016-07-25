@@ -1,6 +1,5 @@
 <!doctype html>
 <html id="device">
-
 <head>
     <meta charset="UTF-8">
     <title>周连涛(周木)-前端工程师-简历</title>
@@ -9,8 +8,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2" />
     <meta content="telephone=no" name="format-detection" />
     <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- build:js dist/index.min.css -->
+    <link rel="stylesheet" href="bundle/index.css">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -31,12 +32,13 @@
             </div> -->
             <div class="swiper-slide myWechat data-hash" id="myWechat">
 
-                <img class="wechatImg" src="img/myWechat.png" width="auto" height="auto" alt="我的微信" />
+                <img class="wechatImg" src="img/myWechat.png" width="auto" height="440" alt="我的微信" />
                 <div class="btn2">
                     微信长按上面的图片
                     <br>点击“识别图中二维码”
                     <br>即可添加我为微信好友
                 </div>
+
 
             </div>
             <div class="swiper-slide page01 data-hash">
@@ -46,7 +48,7 @@
                         <h1>周连涛（周木）</h1>
                         <div class="b">
                             <p>新华社 新华网股份有限公司</p>
-                            <p>高级前端开发工程师 ／ 设计师</p>
+                            <p>高级前端开发工程师 / 设计师</p>
                         </div>
                     </div>
                 </div>
@@ -119,8 +121,7 @@
                         河北日报 燕赵都市报社 技术中心
                     </span>
                         <span class="t">
-                        首席美术工程师 ／ 首席前端工程师
-                    </span>
+ 首席美术工程师 ／ 首席前端工程师                    </span>
                         <span class="t">
                         设计师 ／ 美术编辑
                     </span>
@@ -179,10 +180,14 @@
         </div>
         <div class="mainPagination swiper-pagination"></div>
     </div>
+
+    <!-- build:js dist/index.min.js -->
     <script src="js/jq.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
-    <script src="js/echarts-all.js"></script>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/echarts-all.js"></script> -->
+    <script src="bundle/index.js"></script>
+    <!-- endbuild -->
+
 </body>
 
 </html>

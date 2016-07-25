@@ -1,45 +1,26 @@
-# # .PHONY: css
-# # css:
-# # 	mkdir -p bundle
-# # 	postcss --watch --use autoprefixer --use postcss-import css/jquery.npc_cppcc_cover.css --output bundle/jquery.npc_cppcc_cover.css
-#
-# .PHONY: server
-# server:
-# 	browser-sync start --server --files='index.html, js/index.js, css/index.css'
-#
-# # .PHONY: clean
-# # clean:
-# # 	rm -r bundle
-
+# .PHONY: folder
+# folder:
+# 	mkdir -p bundle
 
 .PHONY: css
 css:
-	mkdir -p src/static
-	postcss --watch --use autoprefixer --use postcss-import src/static/index.css --output src/static/index.min.css
-
-.PHONY: css2
-css2:
-	mkdir -p src/static
-	postcss --watch --use autoprefixer --use postcss-import src/static/channel.css --output src/static/channel.min.css
+	mkdir -p dev/bundle
+	postcss --watch --use autoprefixer --use postcss-import dev/css/index.css --output dev/bundle/index.css
 
 .PHONY: js
 js:
-	mkdir -p src/static
-	babel --watch src/static/index.js --out-file src/static/index.min.js
-
-.PHONY: js2
-js2:
-	mkdir -p src/static
-	babel --watch src/static/footer.js --out-file src/static/footer.min.js
+	mkdir -p dev/bundle
+	babel --watch dev/js/index.js --out-file dev/bundle/index.js
 
 .PHONY: server
 server:
-	browser-sync start --server --files='src'
+	browser-sync start --server --files='index.html, dist, dev'
 
-# .PHONY: clean
-# clean:
-# 	rm -r src/static
+.PHONY: clean
+clean:
+	rm -r dev/bundle
 
 .PHONY: all
 all:
-	make css & make css2 & make js & make js2 & make server & wait
+	# make folder & make css & make js & make server & wait
+	make css & make js & make server & wait
