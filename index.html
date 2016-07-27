@@ -1,5 +1,6 @@
 <!doctype html>
 <html id="device">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -8,9 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2" />
     <meta content="telephone=no" name="format-detection" />
     <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
-    <!-- build:js dist/index.min.css -->
     <link rel="stylesheet" href="bundle/index.min.css">
-    <!-- endbuild -->
 </head>
 
 <body>
@@ -23,10 +22,11 @@
                 <img class="wechatImg swiper-lazy" data-src="img/myWechat.png" width="344" height="440">
                 <div class="swiper-lazy-preloader"></div>
                 <div class="btn2">
-                    微信长按上面的图片
+                    微信长按图片
                     <br>点击“识别图中二维码”
-                    <br>即可添加我为微信好友
+                    <br>添加我为微信好友
                 </div>
+                <div class="tip2"></div>
             </div>
 
             <div class="swiper-slide page01 data-hash">
@@ -34,20 +34,16 @@
                     <img class="photo swiper-lazy" data-src="img/zhoume.avatar.jpg">
                     <div class="swiper-lazy-preloader"></div>
                     <div class="border">
-                        <h1>周木(周连涛)</h1>
+                        <h1>周木（周连涛）</h1>
                         <div class="b">
-                            <p>新华社 新华网股份有限公司</p>
-                            <p>前端组长</p>
-                            <p>高级前端开发工程师 / 设计师</p>
+                            <p>新华通讯社 新华网股份有限公司
+                                <br>前端组长
+                                <br>高级前端工程师
+                                <br>设计师</p>
                         </div>
                     </div>
                 </div>
-                <div class="tip3Box">
-                    <div class="tip3">
-                        <div class="iconBlueArrowUp"></div>
-                        <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
-                    </div>
-                </div>
+                <div class="tip2"></div>
             </div>
 
             <div class="swiper-slide data-hash">
@@ -63,13 +59,13 @@
             </div>
 
             <div class="swiper-slide data-hash">
-                <div class="caseContainer swiper-container gallery" id="gallery">
+                <div class="caseContainer galleryContainer swiper-container" id="galleryContainer">
                     <div class="swiper-wrapper galleryRender">
                     </div>
-                    <!-- <div class="swiper-button-box">
+                    <div class="swiper-button-box">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                    </div> -->
+                    </div>
                     <div class="casePagination galleryPagination swiper-pagination"></div>
                 </div>
             </div>
@@ -79,25 +75,17 @@
                 <div class="boxIn">
                     <h3>我会什么？</h3>
                     <ul>
-                        <li>
-                            <p>我擅长前端动效制作、精通数据渲染、数据格式化以及前端代码的性能优化。</p>
-                        </li>
-                        <li>
-                            <p>我有很强的UI、设计制图能力，我可以独立、全面的掌控产品的最终交付质量。</p>
-                        </li>
-                        <li>
-                            <p>我有很强的交互设计能力，我非常善于从用户角度思考前端开发的综合解决方案。</p>
-                        </li>
-                        <li>
-                            <p>我精通JavaScript、jQuery，熟悉RIA、js路由、熟悉nodejs，对MVC开发模式有深刻理解。</p>
-                        </li>
-                        <li>
-                            <p>我性格随和，崇尚“互联网分享精神”，积极主动解决问题是我的一贯风格。同时我深爱知识的探索。 </p>
-                        </li>
+                        <li>12年工作经验，前端工作方向从09年开始，曾统筹负责燕赵都市网的建设,新华网2016首页改版、新华广播电台、新华社网站建设等。</li>
+                        <li>前端架构设计经验丰富，擅长前端工程师工作协同的分配和管理。</li>
+                        <li>擅长前端动效制作、数据渲染、数据格式化和前端代码的性能调优。</li>
+                        <li>具备专业的UI设计和CG制图能力，可独立掌控web产品的最终交付质量。</li>
+                        <li>具备专业的交互设计能力，非常善于从用户角度建立前端架构的综合解决方案。</li>
+                        <li>精通javascript、jQuery，熟悉js路由、熟悉nodejs，对MVC开发模式有深刻理解。</li>
+                        <li>把积极主动的解决问题作为第一准则，性格随和，热爱知识的探索。</li>
+                        <li>学习能力和工作适应能力极强。</li>
                     </ul>
                     <p class="tip4">
-                        现在您可以 <a class="btn" href="https://cjmm.github.io/profile/">[点击这里]</a>
-                    查看和下载我的最新简历。
+                        现在您可以 <a class="btn" href="https://cjmm.github.io/profile/">[点击这里]</a> 查看和下载我的最新简历。
                     </p>
                 </div>
                 <div class="tip3Box">
@@ -107,70 +95,18 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="swiper-slide page02 data-hash">
-                <div class="boxIn listBox">
-                    <h3>个人能力概况</h3>
-                    <div id="main" style="height:400px"></div>
-                </div>
-                <div class="tip3Box">
-                    <div class="tip3">
-                        <div class="iconBlueArrowUp"></div>
-                        <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="swiper-slide page03 data-hash">
-                <div class="boxIn">
-                    <h3>工作经验 （12年）</h3>
-                    <div class="item">
-                        <span class="t d">
-                        2014年10月 至今
-                    </span>
-                        <span class="t">
-                        新华社 新华网股份有限公司 技术部
-                    </span>
-                        <span class="t">
-                        高级前端开发工程师 ／ 设计师
-                    </span>
-                    </div>
-                    <div class="item">
-                        <span class="t d">
-                        2004年11月 - 2014年10月
-                    </span>
-                        <span class="t">
-                        河北日报 燕赵都市报社 技术中心
-                    </span>
-                        <span class="t">
- 首席美术工程师 ／ 首席前端工程师                    </span>
-                        <span class="t">
-                        设计师 ／ 美术编辑
-                    </span>
-                    </div>
-                    <p class="tip4">
-                        现在您可以访问<a href="https://cjmm.github.io/profile/">https://cjmm.github.io/profile/</a><br>
-                        下载我的最新简历。
-                    </p>
-                    <div class="item">
-                    </div>
-                </div>
-                <div class="tip3Box">
-                    <div class="tip3">
-                        <div class="iconBlueArrowUp"></div>
-                        <div class="iconBlueArrowUp iconBlueArrowUp2"></div>
-                    </div>
-                </div>
-            </div> -->
             <div class="swiper-slide data-hash" id="superwoods_businessCard">
-                <img src="img/superwoods_businessCard_zh_cn.jpg" height="100%" alt="周木中文名片" />
+                <img class="swiper-lazy" data-src="img/superwoods_businessCard_zh_cn.jpg" height="100%" alt="周木中文名片">
+                <div class="swiper-lazy-preloader"></div>
             </div>
             <div class="swiper-slide data-hash" id="superwoods_businessCard_en">
-                <img src="img/superwoods_businessCard_en.jpg" height="100%" alt="superwoods's English businessCard" />
+                <img class="swiper-lazy" data-src="img/superwoods_businessCard_en.jpg" height="100%" alt="superwoods's English businessCard">
+                <div class="swiper-lazy-preloader"></div>
             </div>
             <div class="swiper-slide section6 data-hash" id="sectionContent">
                 <div class="sectionIn">
                     <h2>感谢您的浏览</h2>
                     <p>
-
                     </p>
                     <div class="btn">
                         <a href="https://github.com/superwoods">
@@ -184,21 +120,13 @@
                                 </a>
                     </div>
                 </div>
-
             </div>
-
         </div>
         <div class="swiper-scrollbar"></div>
-
-        <!-- <div class="mainPagination swiper-pagination"></div> -->
     </div>
-
-    <!-- build:js dist/index.min.js -->
     <script src="js/jq.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
-    <!-- <script src="js/echarts-all.js"></script> -->
     <script src="bundle/index.min.js"></script>
-    <!-- endbuild -->
 </body>
 
 </html>
