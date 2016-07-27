@@ -1,16 +1,14 @@
 # **cjmm.github.io**
 
-_cjmm.github.io_ 是超级木木的个人网站。
+_cjmm.github.io_ 是[我的](http://github.io/superwoods)个人网站。同时这个项目也是一个十分方便的开源个人网站和简历模版。
 
-同时这个项目也是一套十分方便的开源个人网站和个人简历模版，您可以尝试 _**Frok**_ 到自己的仓库使用。
-
-Have fun～ 😄
+欢迎您 _**Frok**_ 到自己的仓库使用。Have fun～ 😄
 
 > 最后要特别感谢我的好朋友邓永亮，他给了我很多帮助。
 
 ## How to use?
 
-1. 首先的开发需要有`nodejs`环境。打开终端运行：
+1. 本地开发依赖`nodejs`环境。打开终端运行：
 
   ```
   $ node -v
@@ -46,7 +44,7 @@ Have fun～ 😄
     $ make js
     ```
 
-  - 使用`browser-sync`的web server：
+  - 使用`browser-sync` web server：
 
     ```
     $ make server
@@ -54,11 +52,11 @@ Have fun～ 😄
 
   一般情况下你不需要单独使用他们。
 
-  请注意，运行`make all`，你的html、js和css修改会被`browser-sync`实时监听，将生成新的css和js文件到 _**bundle**_ 文件夹中。
+  请注意，运行`make all`，你的html、js和css的编辑、修改会被`browser-sync`实时监听，将生成编译合并后的（添加.min后缀的）css和js文件到 _**bundle**_ 文件夹中。
 
   配置你的`makefile`启动命令，可以通过修改根目录下的 _**makefile**_ 文件，请使用文本编辑器atom或vim编辑他。
 
-  监听状态下可以使用 _**command+c**_ 终止进程。
+  `browser-sync`监听状态下可以使用 _**command+c**_ 终止进程。
 
 4. 打开一个新的终端进程，运行：
 
