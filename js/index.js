@@ -11,7 +11,7 @@
  *          2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-05:10:36
+ * @(demo)Last modified time: 2016-07-27-21.56 at home
  */
 
 $(function() {
@@ -119,21 +119,21 @@ $(function() {
             title: '木木前端教室',
             device: null,
             compatibility: null,
-            others: '<p><span>hype3课程和前端开发个人经验分享</span></p>'
+            others: '<p><span>hype3课程和前端开发<br>个人经验分享</span></p>'
         }, {
             url: 'http://wwlocation.xinhuanet.com/fortune/wap.htm',
             pic: 'img/mcp.jpg',
             title: '新华财经',
             device: 'Mobile',
             compatibility: 'webkit',
-            others: '<p><span>依赖xinhuanetMCP系统</span></p>'
+            // others: '<p><span>依赖xinhuanetMCP系统</span></p>'
         }, {
             url: 'http://www.xinhuanet.com/video/xinhuaradio/',
             pic: 'img/xinhuaradio.jpg',
-            title: '新华广播',
+            title: '新华广播 (RIA)',
             device: 'PC + Mobile',
             compatibility: 'webkit, IE8+',
-            others: '<p><span>RIA（富互联网应用）</span></p>'
+            // others: '<p><span>RIA（富互联网应用）</span></p>'
         }, {
             url: 'http://www.xinhuanet.com/politics/kzsl70/ybzbsj/index.htm',
             pic: 'img/93.jpg',
@@ -152,13 +152,6 @@ $(function() {
             url: 'case/demo11/index.html',
             pic: 'img/demo11.jpg',
             title: 'VOGUE MINI',
-            device: 'Mobile',
-            compatibility: 'webkit',
-            others: null
-        }, {
-            url: 'case/demo19/index.html',
-            pic: 'img/demo19.jpg',
-            title: 'GQ 年度人物2015',
             device: 'Mobile',
             compatibility: 'webkit',
             others: null
@@ -225,7 +218,7 @@ $(function() {
             var title;
             var device;
             var compatibility;
-            var others = array.others === null ? '' : array.others;
+            var others = ((array.others === null || array.others === undefined) ? '' : array.others);
 
             if (url !== null) {
                 if (array.pic === undefined) {
