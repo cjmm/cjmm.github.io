@@ -10,13 +10,13 @@
  *         2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-10:45:00
+ * @(demo)Last modified time: 2016-07-27-12:59:49
  */
-
 
 @import "../lib/normalize.css";
 
 /* hey we go! */
+
 html, body {
     position: relative;
     height: 100%;
@@ -24,12 +24,13 @@ html, body {
 body {
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     font-size: 14px;
-    color: #000;
+    color: #222;
     margin: 0;
     padding: 0;
     /*font-family: "PingHei", STHeitiSC-Light, "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
     font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 100;
+    /*font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background-color: #f2f2f2;
     background-image: url(../img/cBg.gif);
 }
@@ -50,8 +51,8 @@ body {
     font-size: 18px;
     overflow: hidden;
     display: flex;
-    justify-content:center;
-    flex-flow:column;
+    justify-content: center;
+    flex-flow: column;
     align-items: center;
     background: none;
 }
@@ -91,7 +92,7 @@ body {
 .caseContainer .swiper-slide img {
     width: 100%;
 }
-.caseContainer .swiper-slide h3 {
+.caseContainer .swiper-slide h2 {
     font-size: 20px;
     margin: 10px 0!important;
 }
@@ -102,6 +103,41 @@ body {
 .caseContainer .swiper-slide span {
     padding-right: 10px;
 }
+.galleryContainer {
+    width: 100%;
+}
+.galleryContainer .swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-orient: vertical;
+}
+.galleryContainer .swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+.pc .galleryContainer .swiper-slide img {
+    width: auto;
+    height: 80%;
+}
+.galleryFace .boxIn {
+    width: 280px;
+    margin: 0 auto;
+}
+.galleryContainer .swiper-slide p {
+    font-size: 14px;
+    margin: 10px auto!important;
+}
+
+/*.galleryContainer .swiper-slide h2 {
+    font-size: 20px;
+    margin: 10px 0!important;
+}
+
+.galleryContainer .swiper-slide span {
+    padding-right: 10px;
+}*/
+
 
 /*.info {
     width: 300px;
@@ -127,16 +163,18 @@ body {
 */
 
 .page01 .info {
-    width: 280px;
+    width: 300px;
     margin: 0 auto;
+    text-align: left;
 }
 .photo {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     display: block;
     width: 180px;
     height: 180px;
     border-radius: 100%;
     box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    margin-left: 40px;
 }
 .page01 .info h1 {
     font-size: 32px;
@@ -145,14 +183,15 @@ body {
 .page01 .info .border {
     /*border-left: orange 1px solid;
     border-right: orange 1px solid;*/
-    padding: 0 15px;
-    margin-top: 100px;
+    /*padding: 0 0 0 35px;*/
+    margin-left: 40px;
+    margin-top: 60px;
 }
 .page01 .info .b {
     margin-top: 30px;
 }
 .page01 .info p {
-    line-height: 24px;
+    line-height: 30px;
 }
 .boxIn {
     width: 90%;
@@ -160,13 +199,21 @@ body {
     display: block;
     text-align: left;
 }
-.boxIn h3 {
+.boxIn h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
     /*text-align: center;*/
     font-size: 30px;
     border-bottom: #CCCCCC 1px solid;
+    font-weight: 100;
+}
+.sectionIn h2 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 60px;
 }
 
 /*.boxIn span {
@@ -195,7 +242,7 @@ body {
 }
 
 /*.page02 { display: block; text-align:left; }
-.page02 h3 {
+.page02 h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -207,11 +254,19 @@ body {
     font-size: 14px;
 */
 
+.page02 ul {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0;
+}
+.page02 ul li {
+    list-style: disc;
+}
 .careerContainer .swiper-slide {
     display: flex;
     box-orient: vertical;
 }
-.careerContainer h3 {
+.careerContainer h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -255,27 +310,24 @@ body {
 .cases {
     font-size: 32px;
 }
-.tip {
+.col-title {
+    font-size: 36px;
+}
+.col-title:after {
+    content: '';
+    display: block;
     height: 1px;
     background-color: #CCCCCC;
     margin: 10px 0;
 }
 .tip:after {
-    content: '滑动查看 >>';
-    font-size: 14px;
-    /*color: #999999;*/
+    content: 'See more >>';
+    font-size: 16px;
     font-style: italic;
+    float: right;
 }
-.tip2 {
-    margin-top: 100px;
-}
-.tip2:after {
-    content: '向下滑动是我的电子名片：）';
-    font-size: 14px;
-    /*color: #999999;*/
-    font-style: italic;
-}
-.iconBlueArrowUp {
+.tip2, .tip2:before, .tip2:after {
+    display: block;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20394%20216'%3E%0A%3Cpath%20style='fill:#CCCCCC;'%20d='M196.8,0l196.8,196.8l-18.8,18.8l-178-178l-178,178L0,196.8L196.8,0L196.8,0L196.8,0z'/%3E%0A%3C/svg%3E%0A");
     background-position: center center;
     width: 36px;
@@ -283,58 +335,67 @@ body {
     margin: 0 auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    -ms-transform: rotate(180deg);
-    /* IE 9 */
-    -moz-transform: rotate(180deg);
-    /* Firefox */
-    -webkit-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    /* Opera */
     transform: rotate(180deg);
-    position: absolute;
-    top: 0;
+    position: relative;
 }
-.iconBlueArrowUp2 {
+.tip2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -18px;
+    background: none;
+}
+.tip2:before, .tip2:after {
+    content: '';
+    opacity: .5;
+    position: absolute;
+    transform: rotate(360deg);
+    top: -10px;
+    left: 50%;
+    width: 40px;
+    margin-left: -20px;
+    animation: ani0 1s ease-in-out infinite;
+}
+.tip2:before {
+    opacity: 1;
+    top: 0;
+    transform: translateY(10px);
+}
+
+/*.iconBlueArrowUp2 {
     top: 10px;
     filter: alpha(opacity=50);
     -moz-opacity: .5;
     opacity: .5;
-    /*background-size:90% auto;*/
-}
-.tip3Box {
+}*/
+
+
+/*.tip3Box {
     position: absolute;
     height: 40px;
     bottom: 15px;
     left: 50%;
     width: 40px;
     margin-left: -20px;
-}
-.tip3 {
-    top: 0;
-    position: absolute;
-    animation: ani0 1s ease-in-out infinite;
-    -moz-animation: ani0 1s ease-in-out infinite;
-    /* Firefox */
-    -webkit-animation: ani0 1s ease-in-out infinite;
-    /* Safari 和 Chrome */
-    -o-animation: ani0 1s ease-in-out infinite;
-    /* Opera */
-}
-.cases .tip3Box {
+}*/
+
+.cases .tip2 {
     position: relative;
-    width: 40px;
-    height: 40px;
-    bottom: -10px;
-    left: auto;
     margin-left: 0;
+    left: 0;
+    margin-top: 200px;
 }
-.cases .iconBlueArrowUp {
+
+/*.cases .iconBlueArrowUp {
     width: 22px;
     height: 12px;
-}
-.cases .iconBlueArrowUp2 {
+}*/
+
+
+/*.cases .iconBlueArrowUp2 {
     top: 8px;
-}
+}*/
+
 .tip4 {
     font-size: 16px;
     /*color: #666666;*/
@@ -353,10 +414,6 @@ body {
     text-decoration: underline;
     font-size: 16px;
 }
-
-
-
-
 @keyframes ani0 {
     0% {
         top: 0;
@@ -438,6 +495,9 @@ ul {
 }
 .btn {
     padding-top: 20px;
+}
+.sectionIn .btn {
+    margin-bottom: 80px;
 }
 .section6 a {
     color: #333;
@@ -553,7 +613,6 @@ ul {
     clear: both;
     color: #FFF;
 }
-
 .caseRender .swiper-lazy {
     width: 280px;
     height: 280px;
@@ -568,6 +627,7 @@ ul {
 .page01 .swiper-lazy-preloader {
     top: 36%;
 }
+
 /*.myWechat a:hover .btn2 {
     border: #004986 1px solid;
     background-color: #CCC;
