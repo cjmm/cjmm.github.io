@@ -11,7 +11,7 @@
  *          2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-12:59:51
+ * @(demo)Last modified time: 2016-07-27-05:10:36
  */
 
 $(function() {
@@ -70,15 +70,14 @@ $(function() {
                 .css({
                     'height': Math.round(_this.bodyHeight * 0.6),
                     'width': 'auto'
-                    // 'display': 'block',
-                    // 'margin': '0 auto'
+                        // 'display': 'block',
+                        // 'margin': '0 auto'
                 });
         },
         set: function() {
             var _this = this;
             var type = 'web';
-            if (_this.UA === null || _this.UA === '' || (_this.location.href.indexOf('f=pad') !== -1)) {
-            } else {
+            if (_this.UA === null || _this.UA === '' || (_this.location.href.indexOf('f=pad') !== -1)) {} else {
                 if (_this.UA.indexOf('mi pad') !== -1 || _this.UA.indexOf('xiaomi/miuibrowser') !== -1 || _this.UA.indexOf('ipad') !== -1) {
                     type = 'pad';
                 } else {
@@ -98,114 +97,121 @@ $(function() {
     function mainRender() {
         var $caseRender = $caseContainer.find('.caseRender');
         var caseData = [{
-                url: null, //cases
-                title: '',
-                device: '',
-                compatibility: '',
-                others: '<div class="cases">' +
-                            '<div class="col-title">Projects</div>' +
-                            '<div class="tip"></div>' +
-                            // '<div class="tip2"></div>' +
-                        '</div>'
-            }, {
-                url: 'https://github.com/xinhuaRadioLAB',
-                pic: 'img/xinhuaRadioLabs.tinySq280.png',
-                title: '新华网创意设计实验室 <br> 新华广播实验室',
-                device: null,
-                compatibility: null,
-                others: '<p><span>新华通讯社 新华网股份有限公司</span></p>'
-            }, {
-                url: 'http://superfec.github.io',
-                pic: 'img/superfec.jpg',
-                title: '木木前端教室',
-                device: null,
-                compatibility: null,
-                others: '<p><span>hype3课程和前端开发个人经验分享</span></p>'
-            }, {
-                url: 'http://wwlocation.xinhuanet.com/fortune/wap.htm',
-                pic: 'img/mcp.jpg',
-                title: '新华财经',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: '<p><span>依赖xinhuanetMCP系统</span></p>'
-            }, {
-                url: 'http://www.xinhuanet.com/video/xinhuaradio/',
-                pic: 'img/xinhuaradio.jpg',
-                title: '新华广播',
-                device: 'PC + Mobile',
-                compatibility: 'webkit, IE8+',
-                others: '<p><span>RIA（富互联网应用）</span></p>'
-            }, {
-                url: 'http://www.xinhuanet.com/politics/kzsl70/ybzbsj/index.htm',
-                pic: 'img/93.jpg',
-                title: '新华全媒直播胜利日大阅兵<br>(9.3阅兵)',
-                device: 'PC + Mobile',
-                compatibility: 'webkit, IE8+',
-                others: null
-            }, {
-                url: 'case/demo20/index.html',
-                title: '伦敦生活方式',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            }, {
-                url: 'case/demo11/index.html',
-                title: 'VOGUE MINI',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            },
-            /*, {
-                        url: 'case/demo19/index.html',
-                        title:  'GQ 年度人物2015',
-                        device: 'Mobile',
-                        compatibility: 'webkit',
-                        others: null
-                    }*/
-            {
-                url: 'case/demo18/index.html',
-                title: 'It Bag',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            }, {
-                url: 'case/demo17/index.html',
-                title: '银网',
-                device: 'PC',
-                compatibility: 'IE6+ , 主流',
-                others: null
-            }, {
-                url: 'case/demo16/index.html',
-                title: '男装周2016SS',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            }, {
-                url: 'case/demo15/index.html',
-                title: '时髦一夏2016',
-                device: 'PC',
-                compatibility: 'IE6+ , 主流',
-                others: null
-            }, {
-                url: 'case/demo14/index.html',
-                title: '读者之选',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            }, {
-                url: 'case/demo13/index.html',
-                title: '蜜月婚礼',
-                device: 'PC',
-                compatibility: 'IE6+ , 主流',
-                others: null
-            }, {
-                url: 'case/demo12/index.html',
-                title: 'HOW GQ RU',
-                device: 'Mobile',
-                compatibility: 'webkit',
-                others: null
-            }
-        ];
+            url: null, //cases
+            title: '',
+            device: '',
+            compatibility: '',
+            others: '<div class="cases">' +
+                '<div class="col-title">Projects</div>' +
+                '<div class="tip"></div>' +
+                // '<div class="tip2"></div>' +
+                '</div>'
+        }, {
+            url: 'https://github.com/xinhuaRadioLAB',
+            pic: 'img/xinhuaRadioLabs.tinySq280.png',
+            title: '新华网创意设计实验室 <br> 新华广播实验室',
+            device: null,
+            compatibility: null,
+            others: '<p><span>新华通讯社 新华网股份有限公司</span></p>'
+        }, {
+            url: 'http://superfec.github.io',
+            pic: 'img/superfec.jpg',
+            title: '木木前端教室',
+            device: null,
+            compatibility: null,
+            others: '<p><span>hype3课程和前端开发个人经验分享</span></p>'
+        }, {
+            url: 'http://wwlocation.xinhuanet.com/fortune/wap.htm',
+            pic: 'img/mcp.jpg',
+            title: '新华财经',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: '<p><span>依赖xinhuanetMCP系统</span></p>'
+        }, {
+            url: 'http://www.xinhuanet.com/video/xinhuaradio/',
+            pic: 'img/xinhuaradio.jpg',
+            title: '新华广播',
+            device: 'PC + Mobile',
+            compatibility: 'webkit, IE8+',
+            others: '<p><span>RIA（富互联网应用）</span></p>'
+        }, {
+            url: 'http://www.xinhuanet.com/politics/kzsl70/ybzbsj/index.htm',
+            pic: 'img/93.jpg',
+            title: '新华全媒直播胜利日大阅兵<br>(9.3阅兵)',
+            device: 'PC + Mobile',
+            compatibility: 'webkit, IE8+',
+            others: null
+        }, {
+            url: 'case/demo20/index.html',
+            pic: 'img/demo20.jpg',
+            title: '伦敦生活方式',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo11/index.html',
+            pic: 'img/demo11.jpg',
+            title: 'VOGUE MINI',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo19/index.html',
+            pic: 'img/demo19.jpg',
+            title: 'GQ 年度人物2015',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo18/index.html',
+            pic: 'img/demo18.jpg',
+            title: 'It Bag',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo17/index.html',
+            pic: 'img/demo17.jpg',
+            title: '银网',
+            device: 'PC',
+            compatibility: 'IE6+ , 主流',
+            others: null
+        }, {
+            url: 'case/demo16/index.html',
+            pic: 'img/demo16.jpg',
+            title: '男装周2016SS',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo15/index.html',
+            pic: 'img/demo15.jpg',
+            title: '时髦一夏2016',
+            device: 'PC',
+            compatibility: 'IE6+ , 主流',
+            others: null
+        }, {
+            url: 'case/demo14/index.html',
+            pic: 'img/demo14.jpg',
+            title: '读者之选',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }, {
+            url: 'case/demo13/index.html',
+            pic: 'img/demo13.jpg',
+            title: '蜜月婚礼',
+            device: 'PC',
+            compatibility: 'IE6+ , 主流',
+            others: null
+        }, {
+            url: 'case/demo12/index.html',
+            pic: 'img/demo12.jpg',
+            title: 'HOW GQ RU',
+            device: 'Mobile',
+            compatibility: 'webkit',
+            others: null
+        }];
 
         var arrayLen = caseData.length;
 
@@ -220,7 +226,7 @@ $(function() {
             var device;
             var compatibility;
             var others = array.others === null ? '' : array.others;
-            var newUrl;
+
             if (url !== null) {
                 if (array.pic === undefined) {
                     pic = url.replace('index.html', 'view.jpg');
@@ -228,12 +234,13 @@ $(function() {
                     pic = array.pic;
                 }
 
-                var cons = url.indexOf('case/demo') === 0;
+                console.log(url.indexOf('case/demo'));
 
-                if (cons) {
-                    newUrl = 'http://www.dyliang.com/' + url;
-                    url = newUrl;
+                if (url.indexOf('case/demo') >= 0) {
+                    url = 'http://www.dyliang.com/' + url;
                 }
+
+                console.log(url);
 
                 title = array.title;
 
@@ -320,57 +327,56 @@ $(function() {
     function galleryRender() {
         var $galleryRender = $galleryContainer.find('.galleryRender');
         var galleryData = [{
-                url: null, //gallerys
-                pic: null,
-                title: '',
-                device: '',
-                compatibility: '',
-                others: '<div class="cases">' +
-                            '<div class="col-title">Gallery</div>' +
-                            '<div class="tip"></div>' +
-                            // '<div class="tip2"></div>' +
-                        '</div>'
-            }, {
-                pic: 'gallery/nvyueshi.png',
-                title: '原画CG / 女乐师'
-            }, {
-                pic: 'gallery/juduoduo.png',
-                title: '画我的同事橘多多',
-            }, {
-                pic: 'gallery/mickey1.png',
-                title: '画我的女儿米琪'
-            }, {
-                pic: 'gallery/mickey2.png',
-                title: '画我的女儿米琪，另一幅'
-            }, {
-                pic: 'gallery/emolaoyeye.png',
-                title: '魔兽世界同人CG / 恶魔老爷爷'
-            }, {
-                pic: 'gallery/azhen.png',
-                title: '画我的同事阿甄'
-            }, {
-                pic: 'gallery/guangguang.png',
-                title: '画我的同事光光'
-            }, {
-                pic: 'gallery/manhuaxizuo1.png',
-                title: '女孩儿们习作1'
-            }, {
-                pic: 'gallery/manhuaxizuo2.png',
-                title: '女孩儿们习作2'
-            }, {
-                pic: 'gallery/manhuaxizuo3.png',
-                title: '女孩儿们习作3'
-            }, {
-                pic: 'gallery/rentisuxie.png',
-                title: '大学时代的人体速写习作'
-            }, {
-                pic: 'gallery/shuicaixizuo.png',
-                title: '大学时代水彩作业'
-            }, {
-                pic: 'gallery/zaihuashi.png',
-                title: '在好朋友央美画室'
-            }
-        ];
+            url: null, //gallerys
+            pic: null,
+            title: '',
+            device: '',
+            compatibility: '',
+            others: '<div class="cases">' +
+                '<div class="col-title">Gallery</div>' +
+                '<div class="tip"></div>' +
+                // '<div class="tip2"></div>' +
+                '</div>'
+        }, {
+            pic: 'gallery/nvyueshi.png',
+            title: '原画CG / 女乐师'
+        }, {
+            pic: 'gallery/juduoduo.png',
+            title: '画我的同事橘多多',
+        }, {
+            pic: 'gallery/mickey1.png',
+            title: '画我的女儿米琪'
+        }, {
+            pic: 'gallery/mickey2.png',
+            title: '画我的女儿米琪，另一幅'
+        }, {
+            pic: 'gallery/emolaoyeye.png',
+            title: '魔兽世界同人CG / 恶魔老爷爷'
+        }, {
+            pic: 'gallery/azhen.png',
+            title: '画我的同事阿甄'
+        }, {
+            pic: 'gallery/guangguang.png',
+            title: '画我的同事光光'
+        }, {
+            pic: 'gallery/manhuaxizuo1.png',
+            title: '女孩儿们习作1'
+        }, {
+            pic: 'gallery/manhuaxizuo2.png',
+            title: '女孩儿们习作2'
+        }, {
+            pic: 'gallery/manhuaxizuo3.png',
+            title: '女孩儿们习作3'
+        }, {
+            pic: 'gallery/rentisuxie.png',
+            title: '大学时代的人体速写习作'
+        }, {
+            pic: 'gallery/shuicaixizuo.png',
+            title: '大学时代水彩作业'
+        }, {
+            pic: 'gallery/zaihuashi.png',
+            title: '在好朋友央美画室'
+        }];
 
         var arrayLen = galleryData.length;
 
@@ -451,7 +457,7 @@ $(function() {
             centeredSlides: true,
             slidesPerView: 'auto',
             loop: true,
-            width : window.innerWidth,
+            width: window.innerWidth,
             // spaceBetween: 50,
             prevButton: '.swiper-button-prev',
             nextButton: '.swiper-button-next',

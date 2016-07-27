@@ -174,7 +174,7 @@ module.exports = function(grunt) {
         // 'useminPrepare',       //        useminPrepare
         // 'usemin',              //        usemin
 		// 'copy:img',            //   img: copy
-		'copy:maps',           //  maps: copy
+		// 'copy:maps',           //  maps: copy
 		// 'copy:cases',          // cases: copy
     ]);
 };
