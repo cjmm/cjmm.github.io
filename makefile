@@ -10,7 +10,7 @@ js:
 
 .PHONY: server
 server:
-	browser-sync start --server --files='index.html, bundle, css, js, img, case'
+	browser-sync start --server --files='index.html, bundle, css, js, img'
 
 .PHONY: clean
 clean:
@@ -18,5 +18,4 @@ clean:
 
 .PHONY: all
 all:
-	# make folder & make css & make js & make server & wait
 	make css & make js & make server & wait
