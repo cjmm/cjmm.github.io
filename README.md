@@ -1,6 +1,8 @@
 # **cjmm.github.io**
 
-_cjmm.github.io_ 是超级木木的个人网站。同时这个项目也是一套十分方便的开源个人网站和个人简历模版，您可以尝试 _**Frok**_ 他修改添加自己的内容。
+_cjmm.github.io_ 是超级木木的个人网站。
+
+同时这个项目也是一套十分方便的开源个人网站和个人简历模版，您可以尝试 _**Frok**_ 到自己的仓库使用。
 
 Have fun～ 😄
 
@@ -66,17 +68,17 @@ Have fun～ 😄
 
   使用`grunt`插件`uglify`、`cssmin`压缩 _**bundle**_ 文件夹中的js和css文件。
 
-  现在你可以直接将项目部署到在线的web server发布了！
+现在你可以直接将项目部署到在线的web server发布了！
 
 ## Folder description
 
 ```
-/
- |____ gallery (作品展示用的图片资源)
- |____ img (一般图片资源)
- |____ bundle (编译成生成的js、css和map文件)
- |____ css (开发环境的css文件)
- |____ js (开发环境的js文件)
+ /
+ |____ gallery < 作品展示用的图片资源
+ |____ img     < 一般图片资源
+ |____ bundle  < 实时编译生成的js、css文件（添加.min后缀）
+ |____ css     < 开发环境的css文件
+ |____ js      < 开发环境的js文件和js库文件
  |
  |____ index.html
 ```
