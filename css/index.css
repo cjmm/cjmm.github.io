@@ -10,13 +10,13 @@
  *         2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-12:38:29
+ * @(demo)Last modified time: 2016-07-27-12:59:49
  */
-
 
 @import "../lib/normalize.css";
 
 /* hey we go! */
+
 html, body {
     position: relative;
     height: 100%;
@@ -24,12 +24,13 @@ html, body {
 body {
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     font-size: 14px;
-    color: #000;
+    color: #222;
     margin: 0;
     padding: 0;
     /*font-family: "PingHei", STHeitiSC-Light, "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
     font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 100;
+    /*font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background-color: #f2f2f2;
     background-image: url(../img/cBg.gif);
 }
@@ -50,8 +51,8 @@ body {
     font-size: 18px;
     overflow: hidden;
     display: flex;
-    justify-content:center;
-    flex-flow:column;
+    justify-content: center;
+    flex-flow: column;
     align-items: center;
     background: none;
 }
@@ -91,7 +92,7 @@ body {
 .caseContainer .swiper-slide img {
     width: 100%;
 }
-.caseContainer .swiper-slide h3 {
+.caseContainer .swiper-slide h2 {
     font-size: 20px;
     margin: 10px 0!important;
 }
@@ -102,7 +103,6 @@ body {
 .caseContainer .swiper-slide span {
     padding-right: 10px;
 }
-
 .galleryContainer {
     width: 100%;
 }
@@ -128,7 +128,8 @@ body {
     font-size: 14px;
     margin: 10px auto!important;
 }
-/*.galleryContainer .swiper-slide h3 {
+
+/*.galleryContainer .swiper-slide h2 {
     font-size: 20px;
     margin: 10px 0!important;
 }
@@ -136,9 +137,6 @@ body {
 .galleryContainer .swiper-slide span {
     padding-right: 10px;
 }*/
-
-
-
 
 
 /*.info {
@@ -201,13 +199,21 @@ body {
     display: block;
     text-align: left;
 }
-.boxIn h3 {
+.boxIn h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
     /*text-align: center;*/
     font-size: 30px;
     border-bottom: #CCCCCC 1px solid;
+    font-weight: 100;
+}
+.sectionIn h2 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 60px;
 }
 
 /*.boxIn span {
@@ -236,7 +242,7 @@ body {
 }
 
 /*.page02 { display: block; text-align:left; }
-.page02 h3 {
+.page02 h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -253,17 +259,14 @@ body {
     line-height: 24px;
     margin: 20px 0;
 }
-
 .page02 ul li {
-    list-style:disc;
+    list-style: disc;
 }
-
-
 .careerContainer .swiper-slide {
     display: flex;
     box-orient: vertical;
 }
-.careerContainer h3 {
+.careerContainer h2 {
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -307,7 +310,6 @@ body {
 .cases {
     font-size: 32px;
 }
-
 .col-title {
     font-size: 36px;
 }
@@ -318,18 +320,13 @@ body {
     background-color: #CCCCCC;
     margin: 10px 0;
 }
-
-
 .tip:after {
     content: 'See more >>';
     font-size: 16px;
     font-style: italic;
     float: right;
 }
-
-.tip2,
-.tip2:before,
-.tip2:after {
+.tip2, .tip2:before, .tip2:after {
     display: block;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20394%20216'%3E%0A%3Cpath%20style='fill:#CCCCCC;'%20d='M196.8,0l196.8,196.8l-18.8,18.8l-178-178l-178,178L0,196.8L196.8,0L196.8,0L196.8,0z'/%3E%0A%3C/svg%3E%0A");
     background-position: center center;
@@ -341,7 +338,6 @@ body {
     transform: rotate(180deg);
     position: relative;
 }
-
 .tip2 {
     position: absolute;
     bottom: 10px;
@@ -349,9 +345,7 @@ body {
     margin-left: -18px;
     background: none;
 }
-
-.tip2:before,
-.tip2:after {
+.tip2:before, .tip2:after {
     content: '';
     opacity: .5;
     position: absolute;
@@ -362,14 +356,11 @@ body {
     margin-left: -20px;
     animation: ani0 1s ease-in-out infinite;
 }
-
 .tip2:before {
     opacity: 1;
     top: 0;
     transform: translateY(10px);
 }
-
-
 
 /*.iconBlueArrowUp2 {
     top: 10px;
@@ -388,21 +379,23 @@ body {
     margin-left: -20px;
 }*/
 
-
-
 .cases .tip2 {
     position: relative;
     margin-left: 0;
     left: 0;
     margin-top: 200px;
 }
+
 /*.cases .iconBlueArrowUp {
     width: 22px;
     height: 12px;
 }*/
+
+
 /*.cases .iconBlueArrowUp2 {
     top: 8px;
 }*/
+
 .tip4 {
     font-size: 16px;
     /*color: #666666;*/
@@ -421,10 +414,6 @@ body {
     text-decoration: underline;
     font-size: 16px;
 }
-
-
-
-
 @keyframes ani0 {
     0% {
         top: 0;
@@ -506,6 +495,9 @@ ul {
 }
 .btn {
     padding-top: 20px;
+}
+.sectionIn .btn {
+    margin-bottom: 80px;
 }
 .section6 a {
     color: #333;
@@ -621,7 +613,6 @@ ul {
     clear: both;
     color: #FFF;
 }
-
 .caseRender .swiper-lazy {
     width: 280px;
     height: 280px;
@@ -636,9 +627,6 @@ ul {
 .page01 .swiper-lazy-preloader {
     top: 36%;
 }
-
-
-
 
 /*.myWechat a:hover .btn2 {
     border: #004986 1px solid;

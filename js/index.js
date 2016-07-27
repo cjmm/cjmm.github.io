@@ -11,7 +11,7 @@
  *          2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-12:22:55
+ * @(demo)Last modified time: 2016-07-27-12:59:51
  */
 
 $(function() {
@@ -263,7 +263,7 @@ $(function() {
                     // <img data-src="path/to/picture-1.jpg" class="swiper-lazy">
                     '<img data-src="' + pic + '" class="swiper-lazy" with="280" height="280"></a>' +
                     '<div class="swiper-lazy-preloader"></div>' +
-                    '<h3>' + title + '</h3>' +
+                    '<h2>' + title + '</h2>' +
                     device +
                     compatibility +
                     others +
