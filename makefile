@@ -1,7 +1,3 @@
-# .PHONY: folder
-# folder:
-# 	mkdir -p bundle
-
 .PHONY: css
 css:
 	mkdir -p bundle

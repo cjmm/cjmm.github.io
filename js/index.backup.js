@@ -11,7 +11,7 @@
  *          2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-10:38:05
+ * @(demo)Last modified time: 2016-07-27-10:14:51
  */
 
 var caseSwiper;
@@ -244,7 +244,29 @@ function mainRender() {
 
     var tmp = '';
     for (var i = 0, j = arrayLen; i < j; i++) {
+        //    <div class="swiper-slide">
+        //        <a href="case/demo20/index.html" title="专题(伦敦生活方式)"><img src="case/demo20/view.png" alt="" /></a>
+        //        <h3>专题(伦敦生活方式)</h3>
+        //        <p>设备：
+        //            <span>
+        //                Mobile
+        //            </span>
+        //        </p>
+        //        <p>兼容：
+        //            <span>
+        //                webkit
+        //            </span>
+        //        </p>
+        //    </div>
         var array = caseData[i];
+        //var n;
+        //         if (i<9) {
+        //             n = '0' + (i + 1);
+        //         }
+        //         else {
+        //             n = i + 1;
+        //         }
+
         var url = array.url;
         var pic;
         var title;
@@ -252,12 +274,18 @@ function mainRender() {
         var compatibility;
         var others = array.others === null ? '' : array.others;
         var newUrl;
+
         if (url !== null) {
+
+            //console.log(array.pic=== undefined );
+
             if (array.pic === undefined) {
                 pic = url.replace('index.html', 'view.jpg');
             } else {
                 pic = array.pic;
             }
+
+
 
             var cons = url.indexOf('case/demo') === 0;
 
@@ -265,6 +293,8 @@ function mainRender() {
                 newUrl = 'http://www.dyliang.com/' + url;
                 url = newUrl;
             }
+
+            //console.log(url);
 
             title = array.title;
 
@@ -284,16 +314,22 @@ function mainRender() {
                     '</span></p>';
             }
 
-            // <img data-src="path/to/picture-1.jpg" class="swiper-lazy">
-            // <div class="swiper-lazy-preloader"></div>
+
+            // url: 'http://superfec.github.io',
+            // pic: 'img/superfec.jpg',
+            // title: '木木前端教室',
+            // device: null,
+            // compatibility: null,
+            // others: '<p><span>hype3和一些前端开发个人经验汇总</span></p>'
+
+
+
+
 
             tmp += '<div class="swiper-slide">' +
                 //'<a href="' + url + '" title="' + title + '" target="_blank">' +
                 '<a href="' + url + '" title="' + title + '">' +
-                // '<img src="' + pic + '" alt="' + title + '" /></a>' +
-                // <img data-src="path/to/picture-1.jpg" class="swiper-lazy">
-                '<img data-src="' + pic + '" class="swiper-lazy" with="280" height="280"></a>' +
-                '<div class="swiper-lazy-preloader"></div>' +
+                '<img src="' + pic + '" alt="' + title + '" /></a>' +
                 '<h3>' + title + '</h3>' +
                 device +
                 compatibility +
@@ -307,6 +343,8 @@ function mainRender() {
                 '</div>' +
                 '</div>';
         }
+
+
     }
 
     $caseRender[0].innerHTML = tmp;
@@ -340,12 +378,20 @@ function mainRender() {
         spaceBetween: 50,
         prevButton: '.swiper-button-prev',
         nextButton: '.swiper-button-next',
-        paginationType: 'bullets',
-        lazyLoading : true,
-        // paginationCustomRender: function (swiper, current, total) {
-        //     return current + ' / ' + total;
-        // }
+        paginationType: 'bullets'
+            // paginationCustomRender: function (swiper, current, total) {
+            //     return current + ' / ' + total;
+            // }
     });
+
+
+    // $casePagination
+    //     .prepend('<div class="swiper-button-prev"></div>')
+    //     .append('<div class="swiper-button-next"></div>');
+
+    // $('.btnNext').click(function() {
+    //     caseSwiper.slideNext();
+    // });
 };
 
 // // echarts init
@@ -447,7 +493,6 @@ $(function() {
         scrollbarDraggable: true,
         scrollbarSnapOnRelease: true,
         freeMode : true,
-        lazyLoading : true,
 
     });
 
