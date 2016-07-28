@@ -10,7 +10,7 @@
  *         2016-06-03-10.49 update
  *
  * @(demo)Last modified by:   SuperWoods
- * @(demo)Last modified time: 2016-07-27-12:59:49
+ * @(demo)Last modified time: 2016-07-28-08:06:11
  */
 
 @import "../lib/normalize.css";
@@ -198,6 +198,9 @@ body {
     margin: 0 auto;
     display: block;
     text-align: left;
+}
+.pc .boxIn {
+    width: 42%;
 }
 .boxIn h2 {
     width: 100%;
@@ -551,6 +554,19 @@ ul {
 }
 .hasP7Img img {
     margin: 0 10px;
+}
+.pc .hasP7Img img {
+    width: auto;
+    height: 90%;
+}
+@media screen and (max-width: 860px) {
+    .pc .hasP7Img img {
+        width: 100%;
+        height: auto;
+    }
+    .pc .boxIn {
+        width: 90%;
+    }
 }
 .swiper-slide.hasP7Img {
     flex-flow: row;
