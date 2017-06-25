@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html id="device">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>周连涛(周木)-前端工程师-简历</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
+    <link rel="stylesheet" href="bundle/index.min.css">
+
+</head>
+
+<body>
+    <div class="hide">
+        <img src="img/me.jpg" width="300" height="300" alt="me logo for wechat share" /> </div>
+    <div class="mainContainer swiper-container" id="mainContainer">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page01 data-hash">
+                <div class="info">
+                    <img class="photo" src="img/zhoume.avatar.jpg">
+                    <div class="border">
+                        <h1>周木（周连涛）</h1>
+                        <div class="b">
+                            <p>新华通讯社 新华网股份有限公司
+                                <br>前端组长
+                                <br>高级前端工程师
+                                <br>设计师</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tip2"></div>
+            </div>
+            <div class="swiper-slide page02 data-hash">
+                <div class="boxIn">
+                    <h2>一些近期项目（2017-06-24 Update）</h2>
+                    <ul>
+                        <li><strong>新华访谈</strong>
+                            <a href="http://www.xinhuanet.com/talking/">页面预览</a> |
+                            <a href="https://github.com/xinhuaRadioLAB/xinhuaTalking">Github 仓库地址</a></li>
+                        <li><strong>新华访谈-人物访谈</strong>
+                            <a href="http://news.xinhuanet.com/talking/character/2017040601.htm">页面预览</a> |
+                            <a href="https://xinhuaradiolab.github.io/xinhuaTalking-interview/">新华访谈-人物访谈项目前端开发介绍</a></li>
+                    </ul>
+                </div>
+                <div class="tip2"></div>
+            </div>
+            <div class="swiper-slide myWechat data-hash" id="myWechat">
+                <img class="wechatImg swiper-lazy" data-src="img/myWechat.png" width="344" height="440">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="btn2"> 微信长按图片
+                    <br>点击“识别图中二维码”
+                    <br>添加我为微信好友 </div>
+                <div class="tip2"></div>
+            </div>
+            <div class="swiper-slide data-hash">
+                <div class="caseContainer swiper-container" id="caseContainer">
+                    <div class="swiper-wrapper caseRender"> </div>
+                    <div class="swiper-button-box">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="casePagination swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-slide data-hash">
+                <div class="caseContainer galleryContainer swiper-container" id="galleryContainer">
+                    <div class="swiper-wrapper galleryRender"> </div>
+                    <div class="swiper-button-box">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="casePagination galleryPagination swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-slide page02 data-hash">
+                <div class="boxIn">
+                    <h2>Introduction</h2>
+                    <ul>
+                        <li>12年工作经验，前端工作方向从09年开始，曾统筹负责燕赵都市网的建设,新华网2016首页改版、新华广播电台、新华社网站建设等。</li>
+                        <li>前端架构设计经验丰富，擅长前端工程师工作协同的分配和管理。</li>
+                        <li>擅长前端动效制作、数据渲染、数据格式化和前端代码的性能调优。</li>
+                        <li>具备专业的UI设计和CG制图能力，可独立掌控web产品的最终交付质量。</li>
+                        <li>具备专业的交互设计能力，非常善于从用户角度建立前端架构的综合解决方案。</li>
+                        <li>精通javascript、jQuery，熟悉js路由、熟悉nodejs，对MVC开发模式有深刻理解。</li>
+                        <li>把积极主动的解决问题作为第一准则，性格随和，热爱知识的探索。</li>
+                        <li>学习能力和工作适应能力极强。</li>
+                    </ul>
+                    <p class="tip4"> 您也可以 <a class="btn" href="https://cjmm.github.io/profile/">[点击这里]</a> 查看和下载我的最新简历。 </p>
+                </div>
+                <div class="tip2"></div>
+            </div>
+            <div class="swiper-slide data-hash" id="superwoods_businessCard">
+                <img class="swiper-lazy" data-src="img/superwoods_businessCard_zh_cn.jpg" width="auto" height="100%" alt="周木中文名片">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide data-hash" id="superwoods_businessCard_en">
+                <img class="swiper-lazy" data-src="img/superwoods_businessCard_en.jpg" width="auto" height="100%" alt="superwoods's English businessCard">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide section6 data-hash" id="sectionContent">
+                <div class="sectionIn">
+                    <h2>Thank you</h2>
+                    <div class="btn"> <a href="https://github.com/superwoods">
+                                访问超级木木的Github首页</a> </div>
+                    <div class="license"> 本页由 / 木Studio / 设计制作,
+                        <br> 我们遵守MIT开源协议，保留我的署名您可以尽情享用他们。
+                        <br> Have fun，cheers! 🍻 </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="js/jq.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="bundle/index.min.js"></script>
+</body>
+
+</html>
