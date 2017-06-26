@@ -1,122 +1,200 @@
-<!doctype html>
+![avatar](bundle/2.jpg)
 
-<html id="device">
+我是周连涛，笔名周木，我的朋友更喜欢叫我木木或者 Moo。
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>周连涛(周木)-前端工程师-简历</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f2" />
-    <meta content="telephone=no" name="format-detection" />
-    <link rel="apple-touch-icon-precomposed" href="img/me.jpg" />
-    <link rel="stylesheet" href="bundle/index.min.css">
+一句话概括自己。
 
-</head>
+我是一个内向性格的外向人，感性思考的理性人。会画点画做点平面设计，也能写点代码。爱想些奇奇怪怪的事儿，但最爱喝啤酒、听音乐、骑自行车，愿望是陪孩子一起长大。
 
-<body>
-    <div class="hide">
-        <img src="img/me.jpg" width="300" height="300" alt="me logo for wechat share" /> </div>
-    <div class="mainContainer swiper-container" id="mainContainer">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide page01 data-hash">
-                <div class="info">
-                    <img class="photo" src="img/zhoume.avatar.jpg">
-                    <div class="border">
-                        <h1>周木（周连涛）</h1>
-                        <div class="b">
-                            <p>新华通讯社 新华网股份有限公司
-                                <br>前端组长
-                                <br>高级前端工程师
-                                <br>设计师</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tip2"></div>
-            </div>
-            <div class="swiper-slide page02 data-hash">
-                <div class="boxIn">
-                    <h2>一些近期项目（2017-06-24 Update）</h2>
-                    <ul>
-                        <li><strong>新华访谈</strong>
-                            <a href="http://www.xinhuanet.com/talking/">页面预览</a> |
-                            <a href="https://github.com/xinhuaRadioLAB/xinhuaTalking">Github 仓库地址</a></li>
-                        <li><strong>新华访谈-人物访谈</strong>
-                            <a href="http://news.xinhuanet.com/talking/character/2017040601.htm">页面预览</a> |
-                            <a href="https://xinhuaradiolab.github.io/xinhuaTalking-interview/">新华访谈-人物访谈项目前端开发介绍</a></li>
-                    </ul>
-                </div>
-                <div class="tip2"></div>
-            </div>
-            <div class="swiper-slide myWechat data-hash" id="myWechat">
-                <img class="wechatImg swiper-lazy" data-src="img/myWechat.png" width="344" height="440">
-                <div class="swiper-lazy-preloader"></div>
-                <div class="btn2"> 微信长按图片
-                    <br>点击“识别图中二维码”
-                    <br>添加我为微信好友 </div>
-                <div class="tip2"></div>
-            </div>
-            <div class="swiper-slide data-hash">
-                <div class="caseContainer swiper-container" id="caseContainer">
-                    <div class="swiper-wrapper caseRender"> </div>
-                    <div class="swiper-button-box">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="casePagination swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="swiper-slide data-hash">
-                <div class="caseContainer galleryContainer swiper-container" id="galleryContainer">
-                    <div class="swiper-wrapper galleryRender"> </div>
-                    <div class="swiper-button-box">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="casePagination galleryPagination swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="swiper-slide page02 data-hash">
-                <div class="boxIn">
-                    <h2>Introduction</h2>
-                    <ul>
-                        <li>12年工作经验，前端工作方向从09年开始，曾统筹负责燕赵都市网的建设,新华网2016首页改版、新华广播电台、新华社网站建设等。</li>
-                        <li>前端架构设计经验丰富，擅长前端工程师工作协同的分配和管理。</li>
-                        <li>擅长前端动效制作、数据渲染、数据格式化和前端代码的性能调优。</li>
-                        <li>具备专业的UI设计和CG制图能力，可独立掌控web产品的最终交付质量。</li>
-                        <li>具备专业的交互设计能力，非常善于从用户角度建立前端架构的综合解决方案。</li>
-                        <li>精通javascript、jQuery，熟悉js路由、熟悉nodejs，对MVC开发模式有深刻理解。</li>
-                        <li>把积极主动的解决问题作为第一准则，性格随和，热爱知识的探索。</li>
-                        <li>学习能力和工作适应能力极强。</li>
-                    </ul>
-                    <p class="tip4"> 您也可以 <a class="btn" href="https://cjmm.github.io/profile/">[点击这里]</a> 查看和下载我的最新简历。 </p>
-                </div>
-                <div class="tip2"></div>
-            </div>
-            <div class="swiper-slide data-hash" id="superwoods_businessCard">
-                <img class="swiper-lazy" data-src="img/superwoods_businessCard_zh_cn.jpg" width="auto" height="100%" alt="周木中文名片">
-                <div class="swiper-lazy-preloader"></div>
-            </div>
-            <div class="swiper-slide data-hash" id="superwoods_businessCard_en">
-                <img class="swiper-lazy" data-src="img/superwoods_businessCard_en.jpg" width="auto" height="100%" alt="superwoods's English businessCard">
-                <div class="swiper-lazy-preloader"></div>
-            </div>
-            <div class="swiper-slide section6 data-hash" id="sectionContent">
-                <div class="sectionIn">
-                    <h2>Thank you</h2>
-                    <div class="btn"> <a href="https://github.com/superwoods">
-                                访问超级木木的Github首页</a> </div>
-                    <div class="license"> 本页由 / 木Studio / 设计制作,
-                        <br> 我们遵守MIT开源协议，保留我的署名您可以尽情享用他们。
-                        <br> Have fun，cheers! 🍻 </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-scrollbar"></div>
-    </div>
-    <script src="js/jq.js"></script>
-    <script src="js/swiper.jquery.min.js"></script>
-    <script src="bundle/index.min.js"></script>
-</body>
+我目前在新华通讯社新华网股份有限公司，任前端组长、高级前端工程师和设计师职务。
 
-</html>
+## 一些近期项目（2017-06-24 Update）
+
+-   新华访谈
+    [页面预览](http://www.xinhuanet.com/talking/) \| [Github 仓库地址](https://github.com/xinhuaRadioLAB/xinhuaTalking)
+-   新华访谈-人物访谈
+    [页面预览](http://news.xinhuanet.com/talking/character/2017040601.htm) \| [新华访谈-人物访谈项目前端开发介绍](https://xinhuaradiolab.github.io/xinhuaTalking-interview/)
+
+## 自我评价
+
+-   13 年工作经验，前端工作方向从_09_年开始，曾统筹负责燕赵都市网的建设,新华网2016首页改版、新华广播电台、新华社网站建设等。
+-   前端架构设计经验丰富，擅长前端工程师工作协同的分配和管理。
+-   擅长前端动效制作、数据渲染、数据格式化和前端代码的性能调优。
+-   具备专业的UI设计和CG制图能力，可独立掌控web产品的最终交付质量。
+-   具备专业的交互设计能力，非常善于从用户角度建立前端架构的综合解决方案。
+-   精通javascript、jQuery，熟悉js路由、熟悉nodejs，对MVC开发模式有深刻理解。
+-   把积极主动的解决问题作为第一准则，性格随和，热爱知识的探索。
+-   学习能力和工作适应能力极强。
+
+## 一些比较久远的作品展示
+
+-   [漫画作品](project-gallery/index.html#1)
+-   [开发项目](project-gallery/index.html#2)
+
+### _2016里约奥运会专题 中国强_
+
+-   页面地址：<http://www.xinhuanet.com/sports/rio2016/zgq.htm>
+-   页面预览：[［页面预览0］](case/rio2016_cf1.png)[［页面预览1（大图杀猫）］](case/rio2016_cf2.png)
+-   项目描述：新华网2016里约奥运会专题报道之一中国强专题，主要报道奥运期间奖牌活动情况。
+
+### _新华网2016全国两会_
+
+-   页面地址：<http://www.news.cn/politics/2016lh/>
+-   页面预览：[［页面预览0］](case/npc2016_1.png)[［页面预览1（大图杀猫）］](case/npc2016_2.png)
+-   项目描述：新华网2016全国两会专题，全面报道2016年全国两会实况。
+
+### _建党95周年专题_
+
+-   页面地址：<http://www.news.cn/politics/jd95/index.htm>
+-   页面预览：[［页面预览（大图杀猫）］](case/jd95.png)
+-   项目描述：新华网纪念中国共产党建立95周年专题报道。
+
+### _2015巴黎气候变化大会 新华网_
+
+-   页面地址：<http://www.xinhuanet.com/world/bldh/>
+-   页面预览：[［页面预览（大图杀猫）］](case/cop2015.png)
+
+### _2015习近平主席和你一起许下新年愿望 新华网_
+
+-   页面地址：<http://fms.news.cn/swf/xnyj/>
+-   页面预览：
+
+    -   [［页面预览0（大图杀猫）］](case/xnyj0.png)
+    -   [［页面预览1（大图杀猫）］](case/xnyj1.png)
+    -   [［页面预览2（大图杀猫）］](case/xnyj2.png)
+    -   [［页面预览3（大图杀猫）］](case/xnyj3.png)
+    -   [［页面预览4（大图杀猫）］](case/xnyj4.png)
+    -   [［页面预览5（大图杀猫）］](case/xnyj5.png)
+
+### _新华广播电台_
+
+-   网站地址：<http://www.xinhuanet.com/video/xinhuaradio/>
+-   页面预览：[［页面预览（大图杀猫）］](case/xhr.png)
+-   项目时间：_2015.05 - 2015.06_
+-   项目描述："也许有人要说，生活忙碌，来去匆匆，挤不出去时间看图、读文字、浏览视频怎么办？那么用耳朵听听"新华广播"是个不错的选择。无论是在购物网站逛街、还是在做饭、运动、挤地铁、甚至是在放松泡澡时，都可以使用"新华广播"，收听极速更新、无广告版的"绿色"新闻。"（摘自新华社"新华网2015全新改版专题"介绍相关文章）
+
+### _情人节电子贺卡 for My Wife ❤️_
+
+-   页面地址：<http://cjmm.github.io/love/>
+-   项目描述：送给我最爱的人喽～
+
+## **工作经历**
+
+### _2014.10 - 至今_ 新华网股份有限公司 **（国内上市公司 ）**
+
+公司描述： _新华网于1997年11月7日创办，依托新华社30多个国内分社和170个境外分支机构，组成了覆盖全球的新闻信息采集网络，中（简、繁）、英、法、俄、日、西、阿等7个语种和藏、维两个少数民族语言， 24小时不间断地全球发布新闻信息。经过十余年的创新发展，新华网实现了从单媒体到多媒体、从单语种到多语种、从有线到无线、单一新闻发布平台到多功能发布平台的跨越式发展。新华网2010年转企改制，实行公司化运作体制机制。目前新华网在努力奋进，向着建设符合现代全媒体业态要求的国际一流网络媒体、具有强大创新能力的新型互联网文化企业迈进。_
+
+公司规模： _2000-3000_ 人
+
+#### 主要职务：前端组长
+
+-   所属下属：_17_ 人
+-   工作地点：北京
+-   所在部门：技术部 新华网网页创意设计室
+-   汇报对象：COO／主任
+-   工作职责：
+
+    -   前端架构设计；
+    -   前端工程师工作协同的分配和调度；
+    -   评估前端工程师提交的代码质量及可用性、稳定性，并提出相应优化建议；
+    -   web制作；
+    -   web交互实现；
+    -   js动效实现；
+    -   基于html5、CSS3的交互动画；
+    -   canvas动画和svg绘制；
+    -   手机移动端 html5的web app开发；
+    -   javascript编写及优化；
+    -   SSI技术支持；
+
+#### 其他职务：设计师
+
+-   工作职责：
+
+    -   web视觉设计；
+    -   交互设计；
+    -   手机app设计；
+    -   动画动效设计；
+    -   logo设计 ；
+
+### _2004.11 - 2014.10_ 河北日报 燕赵都市报社 **(10年)**
+
+公司描述：_燕赵都市报是蜚声业内的社会生活类报纸，自1996年创刊以来，始终实行"办报、广告、发行三位一体"运作的理念，坚持新闻立报、内容为王的宗旨，凭借"为市井人家办报，让平民百姓爱读"的"草根情结"，在燕赵大地树立了良好的美誉度和强大的影响力。发行量全国第级9位，世界第17位。_
+
+公司规模： 1000 人
+
+#### 主要职务：首席前端开发工程师 _(2008.11 - 2014.10) (6年)_
+
+-   工作地点： 石家庄
+-   所在部门： 技术中心
+-   汇报对象： COO
+-   下属人数： _4_
+-   工作职责：
+
+    -   网站及相关产品GUI设计工作；
+    -   移动终端 GUI设计；
+    -   web设计与网站架构设计；
+    -   SEO搜索引擎优化；
+    -   Javascript优化；
+    -   整站html编写；
+    -   样式表编写优化；
+    -   对接后台发布系统；
+    -   后台办公系统oa整体GUI设计；
+    -   网站flash广告设计和动画制作；
+    -   负责培训网络编辑；
+    -   负责考核和招聘美工；
+    -   统筹网站大规模改版升级；
+    -   整体GUI风格的调整规划；
+
+-   工作业绩：
+
+    -   燕赵都市报和燕赵都市网荣获世界报业排行第17名、全国报业发行量排行第九名；
+    -   燕赵都市网2008年首批建站技术人员；
+
+#### 其他职务：美术编辑 _(2004.11 - 2008.12)_
+
+-   工作地点：石家庄
+-   所在部门：版式设计中心
+-   汇报对象：设计总监
+-   工作职责：
+
+    -   出版物版式设计；
+    -   出版物排版；
+    -   插图绘制和设计；
+    -   出版物模版设计；
+    -   报纸、周刊及相关封面设计、策划、执行；
+
+* * *
+
+## 个人简介
+
+我从事前端开发和视觉设计工作13年，目前就职于新华网股份有限公司，职务前端组长、高级前端开发工程师、设计师。
+
+我乐于沟通和分享，崇尚黑客精神、OpenWeb 精神和互联网分享精神，热爱参与_Hackathon_活动和技术沙龙。2016年夏季由CareerX和清华大学水木清华基金会联合举办的["_HackerX_清华大学场"](https://segmentfault.com/e/1160000005827260) Hackathon 比赛中取得第二名的成绩, 参赛项目[Slive](https://github.com/xinhuaRadioLAB/HackerX_slive#slive)已经开源，欢迎您Star或Fork 😄。
+
+我同时擅长前端表现层和动画实现方面的工作，对数据格式化、JSON数据、前端MVC框架有一定技术积累，非常擅长jQuery及JQuery插件封装、JS性能优化，我对Github客户端的使用深有体会，我对于前端项目组前端工程师工作协同有丰富实战经验。我熟悉基于node.js的前端开发工具grunt的使用和相关配置。我精通html5整站建设和架构、部署、优化，擅长移动端web项目构建和优化。我同时精通交互设计和平面设计，有非常丰富和专业的平面设计、UI设计经验。
+
+我个人爱好广泛，热爱绘画，擅长CG和人物肖像手绘、油画。另外，我还是重度苹果用户、重度漫画爱好者、重度Blizzrad粉丝。
+
+* * *
+
+## 附录和链接
+
+一些我的文章和博客
+
+<https://github.com/xinhuaRadioLAB/blog/issues>
+
+我的 Github
+
+<https://github.com/superwoods>
+
+个人网站
+
+<http://cjmm.github.io>
+
+* * *
+
+-   这篇文章使用 Markdown 书写
+
+Have fun 😊
+
+Cheers! 🍻
