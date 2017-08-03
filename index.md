@@ -1,37 +1,45 @@
-![avatar](bundle/3.png)
+# 周连涛（周木）个人简历
+
+> v4.0.1
+
+[PDF版](docs/2017-08-03-周连涛简历-前端工程师.pdf)  [pages版](docs/2017-08-03-周连涛简历-前端工程师.pages)
+
+![avatar](bundle/4.png)
 
 我是周连涛，笔名周木，我更喜欢大家叫我木木或者 Moo。
 
-我是一个内向性格的外向人，感性思考的理性人。会画点画做点平面设计，也会写点代码。偶尔有点与众不同，喜欢喝咖啡喝啤酒、听音乐、骑自行车，最喜欢和孩子们在一起。
+我是一个内向性格的外向人，感性思考的理性人。会画点画做点设计，也会写点代码。偶尔有点与众不同，喜欢喝咖啡啤酒、听音乐、骑自行车，最最喜欢和孩子们在一起。
 
-我目前在新华通讯社新华网股份有限公司任前端组长、高级前端工程师和设计师职务。
-
-## 一些近期项目（2017-06-24 Update）
-
--   新华访谈
-    [页面预览](http://www.xinhuanet.com/talking/) \| [Github 仓库地址](https://github.com/xinhuaRadioLAB/xinhuaTalking)
--   新华访谈-人物访谈
-    [页面预览](http://news.xinhuanet.com/talking/character/2017040601.htm) \| [新华访谈-人物访谈项目前端开发介绍](https://xinhuaradiolab.github.io/xinhuaTalking-interview/)
+我目前在新华社新华网股份有限公司任前端组长、高级前端工程师和设计师职务。
 
 * * *
 
 ## 个人特点
 
--   13 年工作经验，曾多次负责大型门户网站整站建设和维护管理工作。
--   熟悉前端开发工作中的协同分配和工作管理。
--   擅长前端动效现实、前端组件开发和前端代码调优。
--   具备专业的 UI 设计和 CG 制图能力，可独立掌控 web 产品的交付质量。
--   具备专业的交互设计能力，善于从用户角度建立前端架构的综合解决方案。
--   精通 javascript、jQuery，熟悉 js 路由、熟悉 nodejs，对 MVC 开发模式有一定理解。
--   擅长使用感性和理性结合的思维方式解决问题。
+-   不安于现状，喜欢打破僵局，积极向上，默认正能量光环。
+-   8年前端开发经验，4年前端团队管理经验。
+-   5年平面设计，UI设计和交互设计经验，擅长漫画肖像手绘，熟悉视频剪辑摄影摄像。
+-   熟练使用 GitHub 协同开发。
+-   擅长前端动效现实、组件开发、代码调优，熟悉模块开发、前端工程化、ES6。
+-   技术视野广阔、热爱技术分享，参与过nodejs开源贡献。
+-   自学能力强，沟通能力出色，处事果断，雷厉风行。
 
 * * *
 
 ## 作品展示
 
-[绘画作品](project-gallery/index.html#1) \| [开发项目](project-gallery/index.html#2)
+### 一些近期项目（2017-06-24 Update）
 
-## 一些旧作品展示
+-   新华访谈
+    [页面预览](http://www.xinhuanet.com/talking/)
+    [Github 仓库地址](https://github.com/xinhuaRadioLAB/xinhuaTalking)
+-   新华访谈-人物访谈
+    [页面预览](http://news.xinhuanet.com/talking/character/2017040601.htm)
+    [新华访谈-人物访谈项目前端开发介绍](https://xinhuaradiolab.github.io/xinhuaTalking-interview/)
+
+## [绘画作品](https://cjmm.github.io/project-gallery/index.html#1)
+
+## [开发项目](https://cjmm.github.io/project-gallery/index.html#2)
 
 ### _2016里约奥运会专题 中国强_
 
